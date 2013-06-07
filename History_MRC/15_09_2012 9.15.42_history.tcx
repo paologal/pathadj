@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TrainingCenterDatabase xmlns="http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2 http://www.garmin.com/xmlschemas/TrainingCenterDatabasev2.xsd">
+
+  <Activities>
+    <Activity Sport="Running">
+      <Id>2012-09-15T07:15:42Z</Id>
+      <Lap StartTime="2012-09-15T07:15:42Z">
+        <TotalTimeSeconds>365.3900000</TotalTimeSeconds>
+        <DistanceMeters>1000.0000000</DistanceMeters>
+        <MaximumSpeed>3.7272329</MaximumSpeed>
+        <Calories>76</Calories>
+        <Intensity>Active</Intensity>
+        <TriggerMethod>Distance</TriggerMethod>
+      </Lap>
+      <Lap StartTime="2012-09-15T07:21:48Z">
+        <TotalTimeSeconds>367.3500000</TotalTimeSeconds>
+        <DistanceMeters>1000.0000000</DistanceMeters>
+        <MaximumSpeed>3.3350000</MaximumSpeed>
+        <Calories>75</Calories>
+        <Intensity>Active</Intensity>
+        <TriggerMethod>Distance</TriggerMethod>
+      </Lap>
+      <Lap StartTime="2012-09-15T07:27:55Z">
+        <TotalTimeSeconds>355.5200000</TotalTimeSeconds>
+        <DistanceMeters>1000.0000000</DistanceMeters>
+        <MaximumSpeed>3.2869263</MaximumSpeed>
+        <Calories>74</Calories>
+        <Intensity>Active</Intensity>
+        <TriggerMethod>Distance</TriggerMethod>
+      </Lap>
+      <Lap StartTime="2012-09-15T07:33:51Z">
+        <TotalTimeSeconds>352.2800000</TotalTimeSeconds>
+        <DistanceMeters>1000.0000000</DistanceMeters>
+        <MaximumSpeed>3.1813350</MaximumSpeed>
+        <Calories>73</Calories>
+        <Intensity>Active</Intensity>
+        <TriggerMethod>Distance</TriggerMethod>
+      </Lap>
+      <Lap StartTime="2012-09-15T07:39:43Z">
+        <TotalTimeSeconds>347.7100000</TotalTimeSeconds>
+        <DistanceMeters>1000.0000000</DistanceMeters>
+        <MaximumSpeed>3.5445642</MaximumSpeed>
+        <Calories>74</Calories>
+        <Intensity>Active</Intensity>
+        <TriggerMethod>Distance</TriggerMethod>
+      </Lap>
+      <Lap StartTime="2012-09-15T07:45:30Z">
+        <TotalTimeSeconds>342.6100000</TotalTimeSeconds>
+        <DistanceMeters>1000.0000000</DistanceMeters>
+        <MaximumSpeed>3.3575020</MaximumSpeed>
+        <Calories>73</Calories>
+        <Intensity>Active</Intensity>
+        <TriggerMethod>Distance</TriggerMethod>
+      </Lap>
+      <Lap StartTime="2012-09-15T07:51:13Z">
+        <TotalTimeSeconds>340.6100000</TotalTimeSeconds>
+        <DistanceMeters>1000.0000000</DistanceMeters>
+        <MaximumSpeed>3.2870133</MaximumSpeed>
+        <Calories>73</Calories>
+        <Intensity>Active</Intensity>
+        <TriggerMethod>Distance</TriggerMethod>
+      </Lap>
+      <Lap StartTime="2012-09-15T07:57:51Z">
+        <TotalTimeSeconds>353.9700000</TotalTimeSeconds>
+        <DistanceMeters>1000.0000000</DistanceMeters>
+        <MaximumSpeed>3.5785122</MaximumSpeed>
+        <Calories>74</Calories>
+        <Intensity>Active</Intensity>
+        <TriggerMethod>Distance</TriggerMethod>
+      </Lap>
+      <Lap StartTime="2012-09-15T08:03:45Z">
+        <TotalTimeSeconds>350.2600000</TotalTimeSeconds>
+        <DistanceMeters>1000.0000000</DistanceMeters>
+        <MaximumSpeed>3.4185205</MaximumSpeed>
+        <Calories>75</Calories>
+        <Intensity>Active</Intensity>
+        <TriggerMethod>Distance</TriggerMethod>
+      </Lap>
+      <Lap StartTime="2012-09-15T08:09:36Z">
+        <TotalTimeSeconds>349.2800000</TotalTimeSeconds>
+        <DistanceMeters>1000.0000000</DistanceMeters>
+        <MaximumSpeed>3.4424028</MaximumSpeed>
+        <Calories>73</Calories>
+        <Intensity>Active</Intensity>
+        <TriggerMethod>Distance</TriggerMethod>
+      </Lap>
+      <Lap StartTime="2012-09-15T08:15:25Z">
+        <TotalTimeSeconds>348.7500000</TotalTimeSeconds>
+        <DistanceMeters>1000.0000000</DistanceMeters>
+        <MaximumSpeed>6.2421618</MaximumSpeed>
+        <Calories>75</Calories>
+        <Intensity>Active</Intensity>
+        <TriggerMethod>Distance</TriggerMethod>
+      </Lap>
+      <Lap StartTime="2012-09-15T08:21:18Z">
+        <TotalTimeSeconds>345.8300000</TotalTimeSeconds>
+        <DistanceMeters>1000.0000000</DistanceMeters>
+        <MaximumSpeed>3.7964218</MaximumSpeed>
+        <Calories>73</Calories>
+        <Intensity>Active</Intensity>
+        <TriggerMethod>Distance</TriggerMethod>
+      </Lap>
+      <Lap StartTime="2012-09-15T08:29:41Z">
+        <TotalTimeSeconds>350.3800000</TotalTimeSeconds>
+        <DistanceMeters>1000.0000000</DistanceMeters>
+        <MaximumSpeed>3.0891194</MaximumSpeed>
+        <Calories>74</Calories>
+        <Intensity>Active</Intensity>
+        <TriggerMethod>Distance</TriggerMethod>
+      </Lap>
+      <Lap StartTime="2012-09-15T08:35:32Z">
+        <TotalTimeSeconds>343.5200000</TotalTimeSeconds>
+        <DistanceMeters>1000.0000000</DistanceMeters>
+        <MaximumSpeed>3.2368579</MaximumSpeed>
+        <Calories>73</Calories>
+        <Intensity>Active</Intensity>
+        <TriggerMethod>Distance</TriggerMethod>
+      </Lap>
+      <Lap StartTime="2012-09-15T08:41:15Z">
+        <TotalTimeSeconds>339.6700000</TotalTimeSeconds>
+        <DistanceMeters>1000.0000000</DistanceMeters>
+        <MaximumSpeed>3.4464979</MaximumSpeed>
+        <Calories>74</Calories>
+        <Intensity>Active</Intensity>
+        <TriggerMethod>Distance</TriggerMethod>
+      </Lap>
+      <Lap StartTime="2012-09-15T08:46:56Z">
+        <TotalTimeSeconds>366.4600000</TotalTimeSeconds>
+        <DistanceMeters>1000.0000000</DistanceMeters>
+        <MaximumSpeed>3.4283383</MaximumSpeed>
+        <Calories>75</Calories>
+        <Intensity>Active</Intensity>
+        <TriggerMethod>Distance</TriggerMethod>
+      </Lap>
+      <Lap StartTime="2012-09-15T08:53:02Z">
+        <TotalTimeSeconds>334.5200000</TotalTimeSeconds>
+        <DistanceMeters>1000.0000000</DistanceMeters>
+        <MaximumSpeed>3.6334248</MaximumSpeed>
+        <Calories>73</Calories>
+        <Intensity>Active</Intensity>
+        <TriggerMethod>Distance</TriggerMethod>
+      </Lap>
+      <Lap StartTime="2012-09-15T08:59:27Z">
+        <TotalTimeSeconds>84.5600000</TotalTimeSeconds>
+        <DistanceMeters>266.7636719</DistanceMeters>
+        <MaximumSpeed>3.4521201</MaximumSpeed>
+        <Calories>19</Calories>
+        <Intensity>Active</Intensity>
+        <TriggerMethod>Manual</TriggerMethod>
+      </Lap>
+      <Creator xsi:type="Device_t">
+        <Name>Forerunner 405</Name>
+        <UnitId>3486701949</UnitId>
+        <ProductID>717</ProductID>
+        <Version>
+          <VersionMajor>2</VersionMajor>
+          <VersionMinor>70</VersionMinor>
+          <BuildMajor>0</BuildMajor>
+          <BuildMinor>0</BuildMinor>
+        </Version>
+      </Creator>
+    </Activity>
+  </Activities>
+
+  <Author xsi:type="Application_t">
+    <Name>Garmin Training Center(r)</Name>
+    <Build>
+      <Version>
+        <VersionMajor>3</VersionMajor>
+        <VersionMinor>6</VersionMinor>
+        <BuildMajor>3</BuildMajor>
+        <BuildMinor>0</BuildMinor>
+      </Version>
+      <Type>Release</Type>
+      <Time>Jun 6 2011, 14:49:41</Time>
+      <Builder>sqa</Builder>
+    </Build>
+    <LangID>IT</LangID>
+    <PartNumber>006-A0119-00</PartNumber>
+  </Author>
+
+</TrainingCenterDatabase>
