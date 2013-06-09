@@ -29,7 +29,7 @@
 #include <vector>
 #include <memory>
 
-#include "adj_path_file.h"
+#include "adj_path.h"
 
 using namespace std;
 
@@ -44,7 +44,7 @@ public:
     void reset();
 
     inline uint32_t get_paths_number() const { return file_array.size(); };
-    inline const shared_ptr<adj_path_file> get_path(uint32_t index) const
+    inline const shared_ptr<adj_path> get_path(uint32_t index) const
 	{
 		if (likely(index < file_array.size()))
 		{
@@ -58,7 +58,7 @@ public:
 
 private:
     string user_dir;
-    vector<shared_ptr<adj_path_file>> file_array;
+    vector<shared_ptr<adj_path>> file_array;
 };
 
 #endif /* ADJ_USER_PATHS_H_ */

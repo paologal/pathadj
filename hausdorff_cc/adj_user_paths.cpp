@@ -85,23 +85,21 @@ void adj_user_paths::load_paths()
 	}
 #endif /* __linux__ */
 
-	printf("Found %d paths\n", file_array.size());
+	printf("Found %d paths\n", (int32_t)file_array.size());
 }
 
 void adj_user_paths::load_path(const string& filename)
 {
-	shared_ptr<adj_path_file> path(new adj_path_file(filename));
+	shared_ptr<adj_path> path(new adj_path(filename));
 	if (true == path->load_file())
 	{
-		//path->dump();
-		printf("%s Distance %f\n", filename.c_str(), path->total_distance());
 		file_array.push_back(path);
 	}
 }
 
 void adj_user_paths::reset()
 {
-	for(vector<shared_ptr<adj_path_file>>::iterator it = file_array.begin(); it != file_array.end(); ++it)
+	for(vector<shared_ptr<adj_path>>::iterator it = file_array.begin(); it != file_array.end(); ++it)
 	{
 		(*it)->reset();
 	}

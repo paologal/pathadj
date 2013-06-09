@@ -16,7 +16,7 @@
  */
 
 /*
- * adj_path_file.cpp
+ * adj_path.cpp
  *
  *  Created on: May 18, 2013
  *      Author: Paolo Galbiati
@@ -26,23 +26,28 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
+#include <algorithm>
+
 #include "platform_config.h"
-#include "adj_path_file.h"
+#include "adj_path.h"
 #include "latlon.h"
 
-adj_path_file::adj_path_file(const string& file):
+adj_path::adj_path(const string& file):
     path_data(nullptr),
-    file_name(file)
+    file_name(file),
+    cumulated_distance(0.0)
 {
+	mean_point = {0.0, 0.0};
+	median_point = {0.0, 0.0};
     memset(&path, 0, sizeof(path));
 };
 
-adj_path_file::~adj_path_file()
+adj_path::~adj_path()
 {
     reset();
 }
 
-void adj_path_file::reset()
+void adj_path::reset()
 {
     file_name.empty();
 
@@ -55,7 +60,7 @@ void adj_path_file::reset()
     memset(&path, 0, sizeof(path));
 }
 
-bool adj_path_file::verify_file_size(uint32_t file_size)
+bool adj_path::verify_file_size(uint32_t file_size)
 {
     uint32_t points = path.points;
     uint32_t check = ((file_size - sizeof(path.points) - sizeof(path.points_check) - sizeof(path.checksum)) >> 3);
@@ -77,7 +82,7 @@ bool adj_path_file::verify_file_size(uint32_t file_size)
     return true;
 }
 
-bool adj_path_file::verify_file()
+bool adj_path::verify_file()
 {
     if (path.points_check != path.points)
     {
@@ -96,7 +101,7 @@ bool adj_path_file::verify_file()
     return true;
 }
 
-bool adj_path_file::load_file()
+bool adj_path::load_file()
 {
     struct stat info;
     if (0 != stat(file_name.c_str(), &info))
@@ -155,10 +160,13 @@ bool adj_path_file::load_file()
         return false;
     }
 
-    return true;
+	//dump();
+	init();
+
+	return true;
 }
 
-void adj_path_file::dump()
+void adj_path::dump()
 {
     printf("Filename: %s\n", file_name.c_str());
     for (uint32_t i = 0; i < path.points; ++i)
@@ -167,16 +175,51 @@ void adj_path_file::dump()
     }
 }
 
-float adj_path_file::total_distance()
+void adj_path::init()
 {
-	float total = 0.0;
+	float sum_lat = 0.0;
+	float sum_lon = 0.0;
+	path_point_t* p0;
+	vector<float> lat_sorted;
+	vector<float> lon_sorted;
+
+	cumulated_distance = 0.0;
     if (path.points)
     {
     	for (uint32_t i = 0; i < path.points - 1; ++i)
     	{
-    		total += latlon::haversine(get_point(i), get_point(i + 1));
+    		p0 = get_point(i);
+
+    		lat_sorted.push_back(p0->lat);
+    		lon_sorted.push_back(p0->lon);
+    		sum_lat += p0->lat;
+    		sum_lon += p0->lon;
+    		cumulated_distance += latlon::haversine(p0, get_point(i + 1));
     	}
     }
 
-    return total;
+    sort(lat_sorted.begin(), lat_sorted.end());
+    sort(lon_sorted.begin(), lon_sorted.end());
+
+    if (path.points % 2)
+    {
+    	path_point_t* p0 = get_point((path.points + 1) / 2);
+    	path_point_t* p1 = get_point((path.points) / 2);
+    	median_point.lat = (p0->lat + p1->lat) / 2;
+    	median_point.lon = (p0->lon + p1->lon) / 2;
+    }
+    else
+    {
+    	path_point_t* p = get_point((path.points) / 2);
+    	median_point.lat = p->lat;
+    	median_point.lon = p->lon;
+    }
+
+    mean_point.lat = sum_lat / path.points;
+    mean_point.lon = sum_lon / path.points;
+
+    printf("Filename: %s\n", file_name.c_str());
+    printf ("Points %d. Total distance %f.\n", path.points, cumulated_distance);
+    printf ("Mean point(%f, %f)\n", mean_point.lat, mean_point.lon);
+    printf ("Median point(%f, %f)\n", median_point.lat, median_point.lon);
 }

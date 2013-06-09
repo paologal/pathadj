@@ -25,7 +25,7 @@
 #ifndef LATLON_H_
 #define LATLON_H_
 
-#include "adj_path_file.h"
+#include "adj_path.h"
 
 class latlon {
 public:
@@ -33,13 +33,13 @@ public:
 	virtual ~latlon();
 
 	static float haversine(const path_point_t* p0, const path_point_t* p1);
-	static float hausdorff(const adj_path_file& p0, const adj_path_file& p1);
+	static float hausdorff(const adj_path& p0, const adj_path& p1);
 
 	static const float RADIANS;
 	static const float EARTH_RADIUS;
 
 private:
-	static float hausdorff_impl(const adj_path_file& p0, const adj_path_file& p1);
+	static float hausdorff_impl(const adj_path& p0, const adj_path& p1);
 };
 
 #endif /* LATLON_H_ */

@@ -46,8 +46,8 @@ int main(int argc, char** argv)
 				#pragma omp parallel for
 				for (int32_t i = j + 1; i < size0; ++i)
 				{
-					const shared_ptr<adj_path_file> path0(paths0.get_path(j));
-					const shared_ptr<adj_path_file> path1(paths0.get_path(i));
+					const shared_ptr<adj_path> path0(paths0.get_path(j));
+					const shared_ptr<adj_path> path1(paths0.get_path(i));
 					float dist = latlon::hausdorff(*path0, *path1);
 					printf ("%d,%d,%d,%s,%s,%f\n",
 							count++,

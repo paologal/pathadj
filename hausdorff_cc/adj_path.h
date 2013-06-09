@@ -47,16 +47,16 @@ typedef struct path_file
     uint32_t checksum;
 } path_file_t;
 
-class adj_path_file
+class adj_path
 {
 public:
-    adj_path_file(const string& file);
-    virtual ~adj_path_file();
+    adj_path(const string& file);
+    virtual ~adj_path();
 
     bool load_file();
     void dump();
     void reset();
-    float total_distance();
+    void init();
 
     inline const string& get_path_name() const { return file_name; };
 
@@ -76,6 +76,10 @@ private:
     uint8_t* path_data;
     path_file_t path;
     string file_name;
+
+    float cumulated_distance;
+    path_point_t mean_point;
+    path_point_t median_point;
 
     bool verify_file_size(uint32_t file_size);
     bool verify_file();

@@ -53,7 +53,7 @@ float latlon::haversine(const path_point_t* p0, const path_point_t* p1)
     return latlon::EARTH_RADIUS * c;
 }
 
-float latlon::hausdorff(const adj_path_file& p0, const adj_path_file& p1)
+float latlon::hausdorff(const adj_path& p0, const adj_path& p1)
 {
 	float dist_01 = latlon::hausdorff_impl(p0, p1);
 	float dist_10 = latlon::hausdorff_impl(p1, p0);
@@ -68,7 +68,7 @@ float latlon::hausdorff(const adj_path_file& p0, const adj_path_file& p1)
 	}
 }
 
-float latlon::hausdorff_impl(const adj_path_file& p0, const adj_path_file& p1)
+float latlon::hausdorff_impl(const adj_path& p0, const adj_path& p1)
 {
 	uint32_t points0 = p0.get_points_number();
 	uint32_t points1 = p1.get_points_number();
