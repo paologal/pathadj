@@ -28,6 +28,8 @@
 #ifdef _WIN32
 #define _USE_MATH_DEFINES
 #include <windows.h>
+#define likely(x)       (x)
+#define unlikely(x)     (x)
 #elif __linux__
 #include <omp.h>
 #include <dirent.h>
