@@ -31,26 +31,23 @@
 
 #include "platform_config.h"
 
-using namespace std;
+using std::string;
 
-typedef struct path_point
-{
+typedef struct path_point {
     float lat;
     float lon;
 } path_point_t;
 
-typedef struct path_file
-{
+typedef struct path_file {
     uint32_t points;
     path_point_t* coordinates;
     uint32_t points_check;
     uint32_t checksum;
 } path_file_t;
 
-class adj_path
-{
-public:
-    adj_path(const string& file);
+class adj_path {
+ public:
+    explicit adj_path(const string& file);
     virtual ~adj_path();
 
     bool load_file();
@@ -58,20 +55,23 @@ public:
     void reset();
     void init();
 
-    inline const string& get_path_name() const { return file_name; };
+    inline const string& get_path_name() const {
+        return file_name;
+    }
 
-    inline uint32_t get_points_number() const { return path.points; };
-    inline path_point_t* get_point(uint32_t index) const
-    {
-        if (likely(index < path.points))
-        {
+    inline uint32_t get_points_number() const {
+        return path.points;
+    }
+
+    inline path_point_t* get_point(uint32_t index) const {
+        if (likely(index < path.points)) {
             return &path.coordinates[index];
         }
 
         return nullptr;
     }
 
-private:
+ private:
     static const uint32_t PATH_FILE_CHECKSUM = 0x00ED00ED;
     uint8_t* path_data;
     path_file_t path;

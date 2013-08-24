@@ -31,32 +31,31 @@
 
 #include "adj_path.h"
 
-using namespace std;
+using std::vector;
+using std::shared_ptr;
 
-class adj_user_paths
-{
-public:
-    adj_user_paths(const string& dir);
+class adj_user_paths {
+ public:
+    explicit adj_user_paths(const string& dir);
     virtual ~adj_user_paths();
 
-	void load_path(const string& filename);
+    void load_path(const string& filename);
     void load_paths();
     void reset();
 
-    inline uint32_t get_paths_number() const { return file_array.size(); };
-    inline const shared_ptr<adj_path> get_path(uint32_t index) const
-	{
-		if (likely(index < file_array.size()))
-		{
-			return file_array[index];
-		}
-		else
-		{
-			return nullptr;
-		}
-	}
+    inline uint32_t get_paths_number() const {
+        return file_array.size();
+    }
 
-private:
+    inline const shared_ptr<adj_path> get_path(uint32_t index) const {
+        if (likely(index < file_array.size())) {
+            return file_array[index];
+        } else {
+            return nullptr;
+        }
+    }
+
+ private:
     string user_dir;
     vector<shared_ptr<adj_path>> file_array;
 };

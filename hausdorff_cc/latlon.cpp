@@ -31,16 +31,14 @@ const float latlon::RADIANS = M_PI / 180.0f;
 const float latlon::EARTH_RADIUS = 6371.0f;
 
 latlon::latlon() {
-    // TODO Auto-generated constructor stub
-
+    // TODO(paolo) Auto-generated constructor stub
 }
 
 latlon::~latlon() {
-    // TODO Auto-generated destructor stub
+    // TODO(paolo) Auto-generated destructor stub
 }
 
 float latlon::haversine(const path_point_t* p0, const path_point_t* p1) {
-
     float delta_lat = (p1->lat - p0->lat) * 0.5f;
     float delta_lon = (p1->lon - p0->lon) * 0.5f;
     float tmp0 = sinf(delta_lat);
@@ -57,8 +55,7 @@ float latlon::hausdorff(const adj_path& p0, const adj_path& p1) {
 
     if (dist_01 > dist_10) {
         return dist_01;
-    }
-    else {
+    } else {
         return dist_10;
     }
 }
@@ -69,8 +66,6 @@ float latlon::hausdorff_impl(const adj_path& p0, const adj_path& p1) {
     float min_dist = INT_MAX;
     float max_dist = 0.0;
     float curr_dist = 0.0;
-
-	printf("Size %ld KB\n", (points0 * points1) * sizeof(float) >> 10);
 
     for (uint32_t i = 0; i < points0; i++) {
         min_dist = INT_MAX;
