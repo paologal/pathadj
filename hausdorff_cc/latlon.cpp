@@ -45,7 +45,7 @@ float latlon::haversine(const path_point_t* p0, const path_point_t* p1) {
     float tmp1 = sinf(delta_lon);
 
     float a = tmp0 * tmp0 + cosf(p0->lat) * cosf(p1->lat) * tmp1 * tmp1;
-    float c = 2 * atan2f(sqrt(a), sqrt(1 - a));
+    float c = 2 * atan2f(sqrtf(a), sqrtf(1 - a));
     return latlon::EARTH_RADIUS * c;
 }
 
