@@ -70,7 +70,7 @@ void adj_user_paths::load_paths() {
             string filename = dir_path + find_data.cFileName;
             this->load_path(filename);
         }
-        while (FindNextFile(hFind, &find_data) != 0) {}
+		while (FindNextFile(hFind, &find_data) != 0);
 
         DWORD dwError = GetLastError();
         if (dwError != ERROR_NO_MORE_FILES) {

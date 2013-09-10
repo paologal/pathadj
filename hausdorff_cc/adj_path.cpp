@@ -41,9 +41,6 @@ adj_path::adj_path(const string& file)
         : path_data(nullptr),
           file_name(file),
           cumulated_distance(0.0) {
-    path_data = nullptr;
-    file_name = file;
-    cumulated_distance = 0.0;
     memset(&mean_point, 0, sizeof(mean_point));
     memset(&median_point, 0, sizeof(median_point));
     memset(&path, 0, sizeof(path));
