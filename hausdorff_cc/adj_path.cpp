@@ -210,6 +210,6 @@ void adj_path::init() {
 
     printf("Filename: %s\n", file_name.c_str());
     printf("Points %d. Total distance %f.\n", path.points, cumulated_distance);
-    printf("Mean point(%f, %f)\n", mean_point.lat, mean_point.lon);
-    printf("Median point(%f, %f)\n", median_point.lat, median_point.lon);
+    printf("Mean point(%f, %f) radians\n", mean_point.lat, mean_point.lon);
+    printf("Median point(%f, %f) radians\n", median_point.lat, median_point.lon);
 }
