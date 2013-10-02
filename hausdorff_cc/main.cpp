@@ -22,12 +22,35 @@
  */
 
 #include "cassert"
+#include <thread>
 
 #include "adj_path.h"
 #include "adj_user_paths.h"
 #include "latlon.h"
 
 #define SCAN_DIR
+
+void compute_subset(const shared_ptr<adj_user_paths> paths, uint32_t size, uint32_t start, uint32_t step) {
+    for (uint32_t j = start; j < size; j += step) {
+        for (uint32_t i = j + 1; i < size; ++i) {
+            const shared_ptr<adj_path> path0(paths->get_path(j));
+            const shared_ptr<adj_path> path1(paths->get_path(i));
+            float dist = latlon::hausdorff(*path0, *path1);
+#ifdef UNIT_TEST
+            float dist_test = latlon::hausdorff_test(*path0, *path1);
+            uint32_t* p_dist = (uint32_t*)&dist;
+            uint32_t* p_dist_test = (uint32_t*)&dist_test;
+            if (dist != dist_test) {
+                printf("ERROR %x\n", *p_dist ^ *p_dist_test);
+            }
+            assert((*p_dist ^ *p_dist_test) < 4);
+#endif /* UNIT_TEST */
+            printf("%d,%d,%d,%s,%s,Distance: %f km\n", start, j, i,
+                    path0->get_path_name().c_str(),
+                    path1->get_path_name().c_str(), dist);
+        }
+    }
+}
 
 int main(int argc, char** argv) {
 #ifdef SCAN_FILE
@@ -58,39 +81,28 @@ int main(int argc, char** argv) {
 #endif /* SCAN_FILE */
 
 #ifdef SCAN_DIR
-    if (argc < 2) {
-        printf("Usage: %s directories\n", argv[0]);
+    if (argc < 3) {
+        printf("Usage: %s threads directories\n", argv[0]);
         return 0;
     }
 
+    std::vector<std::thread> threads;
+    uint32_t num_of_threads = atoi(argv[1]);
     for (int32_t i = 1; i < argc; ++i) {
-        adj_user_paths paths0(argv[i]);
-        paths0.load_paths();
-        int32_t size0 = paths0.get_paths_number();
+        const shared_ptr<adj_user_paths> paths0(new adj_user_paths(argv[i]));
+        paths0->load_paths();
+        uint32_t size0 = paths0->get_paths_number();
 
         if (size0 > 1) {
-            uint32_t count = 0;
-            for (int32_t j = 0; j < size0; ++j) {
-#pragma omp parallel for
-                for (int32_t i = j + 1; i < size0; ++i) {
-                    const shared_ptr<adj_path> path0(paths0.get_path(j));
-                    const shared_ptr<adj_path> path1(paths0.get_path(i));
-                    float dist = latlon::hausdorff(*path0, *path1);
-//                    float dist_test = latlon::hausdorff_test(*path0, *path1);
-//                    uint32_t* p_dist = (uint32_t*)&dist;
-//                    uint32_t* p_dist_test = (uint32_t*)&dist_test;
-//                    if (dist != dist_test) {
-//                        printf("ERROR %x\n", *p_dist ^ *p_dist_test);
-//                    }
-//                    assert((*p_dist ^ *p_dist_test) < 4);
-                    printf("%d,%d,%d,%s,%s,Distance: %f km\n", count++, j, i,
-                            path0->get_path_name().c_str(),
-                            path1->get_path_name().c_str(), dist);
-                }
+            for (int32_t j = 0; j < num_of_threads; ++j) {
+                threads.push_back(std::thread(compute_subset, paths0, size0, j, num_of_threads));
+            }
+            for(auto& thread : threads) {
+                thread.join();
             }
         }
 
-        paths0.reset();
+        paths0->reset();
     }
 #endif /* SCAN_DIR */
 

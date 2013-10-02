@@ -1,0 +1,856 @@
+Filename: ../../History_PL/2012-12-22-112127.bin
+Points 814. Total distance 10.213825.
+Mean point(0.796013, 0.161779) radians
+Median point(0.797115, 0.162150) radians
+Filename: ../../History_PL/2013-01-07-154140.bin
+Points 826. Total distance 10.420325.
+Mean point(0.796021, 0.161777) radians
+Median point(0.797055, 0.162136) radians
+Filename: ../../History_PL/2013-01-20-112827.bin
+Points 821. Total distance 10.471587.
+Mean point(0.796007, 0.161768) radians
+Median point(0.796993, 0.162125) radians
+Filename: ../../History_PL/2013-04-14-092140.bin
+Points 813. Total distance 9.748282.
+Mean point(0.795760, 0.161738) radians
+Median point(0.796587, 0.162151) radians
+Filename: ../../History_PL/2013-02-17-100817.bin
+Points 827. Total distance 10.498736.
+Mean point(0.796019, 0.161781) radians
+Median point(0.797039, 0.162131) radians
+Filename: ../../History_PL/2013-01-19-170619.bin
+Points 812. Total distance 10.377796.
+Mean point(0.796008, 0.161768) radians
+Median point(0.797075, 0.162142) radians
+Filename: ../../History_PL/2013-03-12-053308.bin
+Points 492. Total distance 6.020779.
+Mean point(0.795222, 0.161515) radians
+Median point(0.796759, 0.162011) radians
+Filename: ../../History_PL/2013-03-31-184531.bin
+Points 533. Total distance 6.405163.
+Mean point(0.795480, 0.161510) radians
+Median point(0.797072, 0.161905) radians
+Filename: ../../History_PL/2013-03-23-152733.bin
+Points 493. Total distance 5.925632.
+Mean point(0.795350, 0.161499) radians
+Median point(0.796969, 0.161889) radians
+Filename: ../../History_PL/2013-03-17-081418.bin
+Points 542. Total distance 6.174492.
+Mean point(0.795518, 0.161535) radians
+Median point(0.797018, 0.161956) radians
+Filename: ../../History_PL/2013-04-06-180014.bin
+Points 581. Total distance 6.969887.
+Mean point(0.795422, 0.161584) radians
+Median point(0.796691, 0.162037) radians
+Filename: ../../History_PL/2012-12-07-114752.bin
+Points 469. Total distance 4.935199.
+Mean point(0.795098, 0.161496) radians
+Median point(0.796746, 0.161869) radians
+Filename: ../../History_PL/2012-12-09-105230.bin
+Points 851. Total distance 10.319895.
+Mean point(0.796049, 0.161785) radians
+Median point(0.797042, 0.162133) radians
+Filename: ../../History_PL/2012-12-24-114515.bin
+Points 812. Total distance 10.564084.
+Mean point(0.796000, 0.161764) radians
+Median point(0.797068, 0.162140) radians
+Filename: ../../History_PL/2013-04-26-182231.bin
+Points 760. Total distance 9.683690.
+Mean point(0.795937, 0.161727) radians
+Median point(0.797092, 0.162148) radians
+Filename: ../../History_PL/2012-12-29-120820.bin
+Points 815. Total distance 10.282318.
+Mean point(0.796007, 0.161780) radians
+Median point(0.797019, 0.162128) radians
+Filename: ../../History_PL/2013-03-03-183159.bin
+Points 538. Total distance 5.999613.
+Mean point(0.795477, 0.161505) radians
+Median point(0.797039, 0.161922) radians
+Filename: ../../History_PL/2013-01-26-110203.bin
+Points 841. Total distance 10.655578.
+Mean point(0.796037, 0.161777) radians
+Median point(0.797066, 0.162140) radians
+Filename: ../../History_PL/2013-01-27-111209.bin
+Points 864. Total distance 10.105577.
+Mean point(0.795812, 0.161755) radians
+Median point(0.796518, 0.162213) radians
+Filename: ../../History_PL/2013-03-09-180040.bin
+Points 515. Total distance 5.175136.
+Mean point(0.795415, 0.161506) radians
+Median point(0.797071, 0.161904) radians
+Filename: ../../History_PL/2013-01-05-143744.bin
+Points 1045. Total distance 13.498549.
+Mean point(0.796323, 0.161796) radians
+Median point(0.797370, 0.162121) radians
+Filename: ../../History_PL/2013-05-01-100146.bin
+Points 1006. Total distance 12.469299.
+Mean point(0.796369, 0.161672) radians
+Median point(0.797264, 0.161809) radians
+Filename: ../../History_PL/2013-04-21-092004.bin
+Points 582. Total distance 7.051159.
+Mean point(0.795715, 0.161419) radians
+Median point(0.797240, 0.161701) radians
+Filename: ../../History_PL/2013-01-13-102709.bin
+Points 752. Total distance 10.370497.
+Mean point(0.795933, 0.161766) radians
+Median point(0.797060, 0.162137) radians
+Filename: ../../History_PL/2012-12-08-160248.bin
+Points 548. Total distance 6.072320.
+Mean point(0.795355, 0.161530) radians
+Median point(0.796698, 0.161971) radians
+Filename: ../../History_PL/2013-03-10-082140.bin
+Points 562. Total distance 6.059124.
+Mean point(0.795398, 0.161555) radians
+Median point(0.796697, 0.162005) radians
+Filename: ../../History_PL/2013-04-19-053206.bin
+Points 467. Total distance 6.024379.
+Mean point(0.795135, 0.161498) radians
+Median point(0.796763, 0.162010) radians
+Filename: ../../History_PL/2013-04-13-072012.bin
+Points 493. Total distance 6.053368.
+Mean point(0.795334, 0.161473) radians
+Median point(0.797013, 0.161934) radians
+Filename: ../../History_PL/2013-02-03-111209.bin
+Points 776. Total distance 10.426328.
+Mean point(0.795960, 0.161761) radians
+Median point(0.797039, 0.162131) radians
+Filename: ../../History_PL/2013-03-30-181245.bin
+Points 504. Total distance 6.020215.
+Mean point(0.795266, 0.161534) radians
+Median point(0.796789, 0.162039) radians
+Filename: ../../History_PL/2013-03-22-053407.bin
+Points 460. Total distance 6.010956.
+Mean point(0.795109, 0.161493) radians
+Median point(0.796768, 0.162013) radians
+Filename: ../../History_PL/2013-04-25-192822.bin
+Points 480. Total distance 6.127167.
+Mean point(0.795294, 0.161496) radians
+Median point(0.797006, 0.161931) radians
+Filename: ../../History_PL/2013-02-09-114955.bin
+Points 793. Total distance 10.392735.
+Mean point(0.795983, 0.161771) radians
+Median point(0.797073, 0.162141) radians
+Filename: ../../History_PL/2012-12-25-112057.bin
+Points 767. Total distance 10.085519.
+Mean point(0.795947, 0.161752) radians
+Median point(0.797026, 0.162128) radians
+Filename: ../../History_PL/2013-04-23-053312.bin
+Points 482. Total distance 6.096936.
+Mean point(0.795190, 0.161518) radians
+Median point(0.796752, 0.162033) radians
+Filename: ../../History_PL/2013-03-16-072137.bin
+Points 508. Total distance 6.205115.
+Mean point(0.795222, 0.161564) radians
+Median point(0.796695, 0.162070) radians
+Filename: ../../History_PL/2013-04-05-190925.bin
+Points 510. Total distance 6.101536.
+Mean point(0.795394, 0.161491) radians
+Median point(0.797058, 0.161903) radians
+Filename: ../../History_PL/2012-12-31-094856.bin
+Points 748. Total distance 10.325274.
+Mean point(0.795924, 0.161762) radians
+Median point(0.797061, 0.162139) radians
+Found 38 paths
+0,0,1,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-01-07-154140.bin,Distance: 0.000000 km
+0,0,2,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-01-20-112827.bin,Distance: 0.000000 km
+0,0,3,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-04-14-092140.bin,Distance: 0.000000 km
+0,0,4,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-02-17-100817.bin,Distance: 0.000000 km
+0,0,5,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-01-19-170619.bin,Distance: 0.000000 km
+0,0,6,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-03-12-053308.bin,Distance: 0.000000 km
+0,0,7,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-03-31-184531.bin,Distance: 0.000000 km
+0,0,8,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-03-23-152733.bin,Distance: 0.000000 km
+0,0,9,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-03-17-081418.bin,Distance: 0.000000 km
+0,0,10,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-04-06-180014.bin,Distance: 0.000000 km
+0,0,11,../../History_PL/2012-12-22-112127.bin,../../History_PL/2012-12-07-114752.bin,Distance: 0.000000 km
+0,0,12,../../History_PL/2012-12-22-112127.bin,../../History_PL/2012-12-09-105230.bin,Distance: 0.000000 km
+0,0,13,../../History_PL/2012-12-22-112127.bin,../../History_PL/2012-12-24-114515.bin,Distance: 0.000000 km
+0,0,14,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-04-26-182231.bin,Distance: 0.000000 km
+0,0,15,../../History_PL/2012-12-22-112127.bin,../../History_PL/2012-12-29-120820.bin,Distance: 0.000000 km
+0,0,16,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-03-03-183159.bin,Distance: 0.000000 km
+0,0,17,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-01-26-110203.bin,Distance: 0.000000 km
+0,0,18,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-01-27-111209.bin,Distance: 0.000000 km
+0,0,19,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-03-09-180040.bin,Distance: 0.000000 km
+0,0,20,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+0,0,21,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+0,0,22,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+0,0,23,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+0,0,24,../../History_PL/2012-12-22-112127.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+0,0,25,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+0,0,26,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+0,0,27,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+0,0,28,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+0,0,29,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+0,0,30,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+0,0,31,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+0,0,32,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+0,0,33,../../History_PL/2012-12-22-112127.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+0,0,34,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+0,0,35,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+0,0,36,../../History_PL/2012-12-22-112127.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+0,0,37,../../History_PL/2012-12-22-112127.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+0,2,3,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-04-14-092140.bin,Distance: 0.000000 km
+0,2,4,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-02-17-100817.bin,Distance: 0.000000 km
+0,2,5,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-01-19-170619.bin,Distance: 0.000000 km
+0,2,6,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-03-12-053308.bin,Distance: 0.000000 km
+0,2,7,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-03-31-184531.bin,Distance: 0.000000 km
+0,2,8,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-03-23-152733.bin,Distance: 0.000000 km
+0,2,9,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-03-17-081418.bin,Distance: 0.000000 km
+0,2,10,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-04-06-180014.bin,Distance: 0.000000 km
+0,2,11,../../History_PL/2013-01-20-112827.bin,../../History_PL/2012-12-07-114752.bin,Distance: 0.000000 km
+0,2,12,../../History_PL/2013-01-20-112827.bin,../../History_PL/2012-12-09-105230.bin,Distance: 0.000000 km
+0,2,13,../../History_PL/2013-01-20-112827.bin,../../History_PL/2012-12-24-114515.bin,Distance: 0.000000 km
+0,2,14,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-04-26-182231.bin,Distance: 0.000000 km
+0,2,15,../../History_PL/2013-01-20-112827.bin,../../History_PL/2012-12-29-120820.bin,Distance: 0.000000 km
+0,2,16,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-03-03-183159.bin,Distance: 0.000000 km
+0,2,17,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-01-26-110203.bin,Distance: 0.000000 km
+0,2,18,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-01-27-111209.bin,Distance: 0.000000 km
+0,2,19,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-03-09-180040.bin,Distance: 0.000000 km
+0,2,20,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+1,1,2,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-01-20-112827.bin,Distance: 0.000000 km
+1,1,3,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-04-14-092140.bin,Distance: 0.000000 km
+1,1,4,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-02-17-100817.bin,Distance: 0.000000 km
+1,1,5,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-01-19-170619.bin,Distance: 0.000000 km
+1,1,6,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-03-12-053308.bin,Distance: 0.000000 km
+1,1,7,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-03-31-184531.bin,Distance: 0.000000 km
+1,1,8,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-03-23-152733.bin,Distance: 0.000000 km
+1,1,9,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-03-17-081418.bin,Distance: 0.000000 km
+1,1,10,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-04-06-180014.bin,Distance: 0.000000 km
+1,1,11,../../History_PL/2013-01-07-154140.bin,../../History_PL/2012-12-07-114752.bin,Distance: 0.000000 km
+1,1,12,../../History_PL/2013-01-07-154140.bin,../../History_PL/2012-12-09-105230.bin,Distance: 0.000000 km
+1,1,13,../../History_PL/2013-01-07-154140.bin,../../History_PL/2012-12-24-114515.bin,Distance: 0.000000 km
+1,1,14,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-04-26-182231.bin,Distance: 0.000000 km
+1,1,15,../../History_PL/2013-01-07-154140.bin,../../History_PL/2012-12-29-120820.bin,Distance: 0.000000 km
+1,1,16,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-03-03-183159.bin,Distance: 0.000000 km
+1,1,17,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-01-26-110203.bin,Distance: 0.000000 km
+1,1,18,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-01-27-111209.bin,Distance: 0.000000 km
+1,1,19,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-03-09-180040.bin,Distance: 0.000000 km
+1,1,20,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+1,1,21,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+1,1,22,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+1,1,23,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+1,1,24,../../History_PL/2013-01-07-154140.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+1,1,25,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+1,1,26,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+1,1,27,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+1,1,28,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+1,1,29,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+1,1,30,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+1,1,31,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+1,1,32,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+1,1,33,../../History_PL/2013-01-07-154140.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+1,1,34,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+1,1,35,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+1,1,36,../../History_PL/2013-01-07-154140.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+1,1,37,../../History_PL/2013-01-07-154140.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+1,3,4,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-02-17-100817.bin,Distance: 0.000000 km
+1,3,5,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-01-19-170619.bin,Distance: 0.000000 km
+1,3,6,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-03-12-053308.bin,Distance: 0.000000 km
+1,3,7,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-03-31-184531.bin,Distance: 0.000000 km
+1,3,8,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-03-23-152733.bin,Distance: 0.000000 km
+1,3,9,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-03-17-081418.bin,Distance: 0.000000 km
+1,3,10,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-04-06-180014.bin,Distance: 0.000000 km
+1,3,11,../../History_PL/2013-04-14-092140.bin,../../History_PL/2012-12-07-114752.bin,Distance: 0.000000 km
+1,3,12,../../History_PL/2013-04-14-092140.bin,../../History_PL/2012-12-09-105230.bin,Distance: 0.000000 km
+1,3,13,../../History_PL/2013-04-14-092140.bin,../../History_PL/2012-12-24-114515.bin,Distance: 0.000000 km
+1,3,14,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-04-26-182231.bin,Distance: 0.000000 km
+1,3,15,../../History_PL/2013-04-14-092140.bin,../../History_PL/2012-12-29-120820.bin,Distance: 0.000000 km
+1,3,16,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-03-03-183159.bin,Distance: 0.000000 km
+1,3,17,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-01-26-110203.bin,Distance: 0.000000 km
+1,3,18,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-01-27-111209.bin,Distance: 0.000000 km
+1,3,19,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-03-09-180040.bin,Distance: 0.000000 km
+1,3,20,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+1,3,21,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+1,3,22,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+1,3,23,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+1,3,24,../../History_PL/2013-04-14-092140.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+1,3,25,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+1,3,26,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+1,3,27,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+1,3,28,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+1,3,29,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+0,2,21,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+0,2,22,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+0,2,23,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+0,2,24,../../History_PL/2013-01-20-112827.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+0,2,25,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+0,2,26,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+0,2,27,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+0,2,28,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+0,2,29,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+0,2,30,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+0,2,31,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+0,2,32,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+0,2,33,../../History_PL/2013-01-20-112827.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+0,2,34,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+0,2,35,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+0,2,36,../../History_PL/2013-01-20-112827.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+0,2,37,../../History_PL/2013-01-20-112827.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+0,4,5,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-01-19-170619.bin,Distance: 0.000000 km
+0,4,6,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-03-12-053308.bin,Distance: 0.000000 km
+0,4,7,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-03-31-184531.bin,Distance: 0.000000 km
+0,4,8,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-03-23-152733.bin,Distance: 0.000000 km
+0,4,9,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-03-17-081418.bin,Distance: 0.000000 km
+0,4,10,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-04-06-180014.bin,Distance: 0.000000 km
+0,4,11,../../History_PL/2013-02-17-100817.bin,../../History_PL/2012-12-07-114752.bin,Distance: 0.000000 km
+0,4,12,../../History_PL/2013-02-17-100817.bin,../../History_PL/2012-12-09-105230.bin,Distance: 0.000000 km
+0,4,13,../../History_PL/2013-02-17-100817.bin,../../History_PL/2012-12-24-114515.bin,Distance: 0.000000 km
+0,4,14,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-04-26-182231.bin,Distance: 0.000000 km
+0,4,15,../../History_PL/2013-02-17-100817.bin,../../History_PL/2012-12-29-120820.bin,Distance: 0.000000 km
+0,4,16,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-03-03-183159.bin,Distance: 0.000000 km
+0,4,17,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-01-26-110203.bin,Distance: 0.000000 km
+0,4,18,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-01-27-111209.bin,Distance: 0.000000 km
+0,4,19,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-03-09-180040.bin,Distance: 0.000000 km
+0,4,20,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+0,4,21,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+0,4,22,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+0,4,23,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+0,4,24,../../History_PL/2013-02-17-100817.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+0,4,25,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+0,4,26,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+0,4,27,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+0,4,28,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+0,4,29,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+0,4,30,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+0,4,31,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+0,4,32,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+0,4,33,../../History_PL/2013-02-17-100817.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+0,4,34,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+0,4,35,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+0,4,36,../../History_PL/2013-02-17-100817.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+0,4,37,../../History_PL/2013-02-17-100817.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+0,6,7,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-03-31-184531.bin,Distance: 0.000000 km
+0,6,8,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-03-23-152733.bin,Distance: 0.000000 km
+0,6,9,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-03-17-081418.bin,Distance: 0.000000 km
+0,6,10,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-04-06-180014.bin,Distance: 0.000000 km
+0,6,11,../../History_PL/2013-03-12-053308.bin,../../History_PL/2012-12-07-114752.bin,Distance: 0.000000 km
+0,6,12,../../History_PL/2013-03-12-053308.bin,../../History_PL/2012-12-09-105230.bin,Distance: 0.000000 km
+0,6,13,../../History_PL/2013-03-12-053308.bin,../../History_PL/2012-12-24-114515.bin,Distance: 0.000000 km
+0,6,14,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-04-26-182231.bin,Distance: 0.000000 km
+0,6,15,../../History_PL/2013-03-12-053308.bin,../../History_PL/2012-12-29-120820.bin,Distance: 0.000000 km
+0,6,16,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-03-03-183159.bin,Distance: 0.000000 km
+0,6,17,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-01-26-110203.bin,Distance: 0.000000 km
+0,6,18,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-01-27-111209.bin,Distance: 0.000000 km
+0,6,19,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-03-09-180040.bin,Distance: 0.000000 km
+0,6,20,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+0,6,21,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+0,6,22,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+0,6,23,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+0,6,24,../../History_PL/2013-03-12-053308.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+0,6,25,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+0,6,26,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+0,6,27,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+0,6,28,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+0,6,29,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+0,6,30,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+0,6,31,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+0,6,32,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+0,6,33,../../History_PL/2013-03-12-053308.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+0,6,34,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+0,6,35,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+0,6,36,../../History_PL/2013-03-12-053308.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+0,6,37,../../History_PL/2013-03-12-053308.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+0,8,9,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-03-17-081418.bin,Distance: 0.000000 km
+0,8,10,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-04-06-180014.bin,Distance: 0.000000 km
+0,8,11,../../History_PL/2013-03-23-152733.bin,../../History_PL/2012-12-07-114752.bin,Distance: 0.000000 km
+0,8,12,../../History_PL/2013-03-23-152733.bin,../../History_PL/2012-12-09-105230.bin,Distance: 0.000000 km
+0,8,13,../../History_PL/2013-03-23-152733.bin,../../History_PL/2012-12-24-114515.bin,Distance: 0.000000 km
+0,8,14,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-04-26-182231.bin,Distance: 0.000000 km
+0,8,15,../../History_PL/2013-03-23-152733.bin,../../History_PL/2012-12-29-120820.bin,Distance: 0.000000 km
+0,8,16,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-03-03-183159.bin,Distance: 0.000000 km
+0,8,17,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-01-26-110203.bin,Distance: 0.000000 km
+0,8,18,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-01-27-111209.bin,Distance: 0.000000 km
+0,8,19,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-03-09-180040.bin,Distance: 0.000000 km
+0,8,20,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+0,8,21,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+0,8,22,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+0,8,23,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+0,8,24,../../History_PL/2013-03-23-152733.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+0,8,25,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+0,8,26,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+0,8,27,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+0,8,28,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+0,8,29,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+0,8,30,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+0,8,31,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+0,8,32,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+0,8,33,../../History_PL/2013-03-23-152733.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+0,8,34,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+0,8,35,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+0,8,36,../../History_PL/2013-03-23-152733.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+1,3,30,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+1,3,31,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+1,3,32,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+1,3,33,../../History_PL/2013-04-14-092140.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+1,3,34,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+1,3,35,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+1,3,36,../../History_PL/2013-04-14-092140.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+1,3,37,../../History_PL/2013-04-14-092140.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+1,5,6,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-03-12-053308.bin,Distance: 0.000000 km
+1,5,7,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-03-31-184531.bin,Distance: 0.000000 km
+1,5,8,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-03-23-152733.bin,Distance: 0.000000 km
+1,5,9,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-03-17-081418.bin,Distance: 0.000000 km
+1,5,10,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-04-06-180014.bin,Distance: 0.000000 km
+1,5,11,../../History_PL/2013-01-19-170619.bin,../../History_PL/2012-12-07-114752.bin,Distance: 0.000000 km
+1,5,12,../../History_PL/2013-01-19-170619.bin,../../History_PL/2012-12-09-105230.bin,Distance: 0.000000 km
+1,5,13,../../History_PL/2013-01-19-170619.bin,../../History_PL/2012-12-24-114515.bin,Distance: 0.000000 km
+1,5,14,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-04-26-182231.bin,Distance: 0.000000 km
+1,5,15,../../History_PL/2013-01-19-170619.bin,../../History_PL/2012-12-29-120820.bin,Distance: 0.000000 km
+1,5,16,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-03-03-183159.bin,Distance: 0.000000 km
+1,5,17,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-01-26-110203.bin,Distance: 0.000000 km
+1,5,18,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-01-27-111209.bin,Distance: 0.000000 km
+1,5,19,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-03-09-180040.bin,Distance: 0.000000 km
+1,5,20,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+1,5,21,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+1,5,22,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+1,5,23,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+1,5,24,../../History_PL/2013-01-19-170619.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+1,5,25,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+1,5,26,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+1,5,27,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+1,5,28,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+1,5,29,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+1,5,30,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+1,5,31,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+1,5,32,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+1,5,33,../../History_PL/2013-01-19-170619.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+1,5,34,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+1,5,35,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+1,5,36,../../History_PL/2013-01-19-170619.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+1,5,37,../../History_PL/2013-01-19-170619.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+1,7,8,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-03-23-152733.bin,Distance: 0.000000 km
+1,7,9,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-03-17-081418.bin,Distance: 0.000000 km
+1,7,10,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-04-06-180014.bin,Distance: 0.000000 km
+1,7,11,../../History_PL/2013-03-31-184531.bin,../../History_PL/2012-12-07-114752.bin,Distance: 0.000000 km
+1,7,12,../../History_PL/2013-03-31-184531.bin,../../History_PL/2012-12-09-105230.bin,Distance: 0.000000 km
+1,7,13,../../History_PL/2013-03-31-184531.bin,../../History_PL/2012-12-24-114515.bin,Distance: 0.000000 km
+1,7,14,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-04-26-182231.bin,Distance: 0.000000 km
+1,7,15,../../History_PL/2013-03-31-184531.bin,../../History_PL/2012-12-29-120820.bin,Distance: 0.000000 km
+1,7,16,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-03-03-183159.bin,Distance: 0.000000 km
+1,7,17,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-01-26-110203.bin,Distance: 0.000000 km
+1,7,18,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-01-27-111209.bin,Distance: 0.000000 km
+1,7,19,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-03-09-180040.bin,Distance: 0.000000 km
+1,7,20,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+1,7,21,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+1,7,22,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+1,7,23,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+1,7,24,../../History_PL/2013-03-31-184531.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+0,8,37,../../History_PL/2013-03-23-152733.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+0,10,11,../../History_PL/2013-04-06-180014.bin,../../History_PL/2012-12-07-114752.bin,Distance: 0.000000 km
+0,10,12,../../History_PL/2013-04-06-180014.bin,../../History_PL/2012-12-09-105230.bin,Distance: 0.000000 km
+1,7,25,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+1,7,26,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+1,7,27,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+1,7,28,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+1,7,29,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+1,7,30,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+1,7,31,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+1,7,32,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+1,7,33,../../History_PL/2013-03-31-184531.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+1,7,34,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+1,7,35,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+1,7,36,../../History_PL/2013-03-31-184531.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+1,7,37,../../History_PL/2013-03-31-184531.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+1,9,10,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-04-06-180014.bin,Distance: 0.000000 km
+1,9,11,../../History_PL/2013-03-17-081418.bin,../../History_PL/2012-12-07-114752.bin,Distance: 0.000000 km
+1,9,12,../../History_PL/2013-03-17-081418.bin,../../History_PL/2012-12-09-105230.bin,Distance: 0.000000 km
+1,9,13,../../History_PL/2013-03-17-081418.bin,../../History_PL/2012-12-24-114515.bin,Distance: 0.000000 km
+1,9,14,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-04-26-182231.bin,Distance: 0.000000 km
+1,9,15,../../History_PL/2013-03-17-081418.bin,../../History_PL/2012-12-29-120820.bin,Distance: 0.000000 km
+1,9,16,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-03-03-183159.bin,Distance: 0.000000 km
+1,9,17,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-01-26-110203.bin,Distance: 0.000000 km
+1,9,18,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-01-27-111209.bin,Distance: 0.000000 km
+1,9,19,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-03-09-180040.bin,Distance: 0.000000 km
+1,9,20,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+1,9,21,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+1,9,22,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+1,9,23,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+1,9,24,../../History_PL/2013-03-17-081418.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+1,9,25,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+1,9,26,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+1,9,27,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+1,9,28,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+1,9,29,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+1,9,30,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+1,9,31,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+1,9,32,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+1,9,33,../../History_PL/2013-03-17-081418.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+1,9,34,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+1,9,35,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+1,9,36,../../History_PL/2013-03-17-081418.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+1,9,37,../../History_PL/2013-03-17-081418.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+1,11,12,../../History_PL/2012-12-07-114752.bin,../../History_PL/2012-12-09-105230.bin,Distance: 0.000000 km
+1,11,13,../../History_PL/2012-12-07-114752.bin,../../History_PL/2012-12-24-114515.bin,Distance: 0.000000 km
+1,11,14,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-04-26-182231.bin,Distance: 0.000000 km
+1,11,15,../../History_PL/2012-12-07-114752.bin,../../History_PL/2012-12-29-120820.bin,Distance: 0.000000 km
+1,11,16,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-03-03-183159.bin,Distance: 0.000000 km
+1,11,17,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-01-26-110203.bin,Distance: 0.000000 km
+1,11,18,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-01-27-111209.bin,Distance: 0.000000 km
+1,11,19,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-03-09-180040.bin,Distance: 0.000000 km
+1,11,20,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+1,11,21,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+1,11,22,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+0,10,13,../../History_PL/2013-04-06-180014.bin,../../History_PL/2012-12-24-114515.bin,Distance: 0.000000 km
+0,10,14,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-04-26-182231.bin,Distance: 0.000000 km
+0,10,15,../../History_PL/2013-04-06-180014.bin,../../History_PL/2012-12-29-120820.bin,Distance: 0.000000 km
+0,10,16,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-03-03-183159.bin,Distance: 0.000000 km
+0,10,17,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-01-26-110203.bin,Distance: 0.000000 km
+0,10,18,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-01-27-111209.bin,Distance: 0.000000 km
+0,10,19,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-03-09-180040.bin,Distance: 0.000000 km
+0,10,20,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+0,10,21,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+0,10,22,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+0,10,23,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+0,10,24,../../History_PL/2013-04-06-180014.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+0,10,25,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+0,10,26,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+0,10,27,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+0,10,28,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+0,10,29,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+0,10,30,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+0,10,31,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+0,10,32,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+0,10,33,../../History_PL/2013-04-06-180014.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+0,10,34,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+0,10,35,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+0,10,36,../../History_PL/2013-04-06-180014.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+0,10,37,../../History_PL/2013-04-06-180014.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+0,12,13,../../History_PL/2012-12-09-105230.bin,../../History_PL/2012-12-24-114515.bin,Distance: 0.000000 km
+0,12,14,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-04-26-182231.bin,Distance: 0.000000 km
+0,12,15,../../History_PL/2012-12-09-105230.bin,../../History_PL/2012-12-29-120820.bin,Distance: 0.000000 km
+0,12,16,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-03-03-183159.bin,Distance: 0.000000 km
+0,12,17,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-01-26-110203.bin,Distance: 0.000000 km
+0,12,18,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-01-27-111209.bin,Distance: 0.000000 km
+0,12,19,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-03-09-180040.bin,Distance: 0.000000 km
+0,12,20,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+0,12,21,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+0,12,22,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+0,12,23,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+0,12,24,../../History_PL/2012-12-09-105230.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+0,12,25,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+0,12,26,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+0,12,27,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+0,12,28,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+0,12,29,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+0,12,30,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+0,12,31,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+0,12,32,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+0,12,33,../../History_PL/2012-12-09-105230.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+0,12,34,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+0,12,35,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+0,12,36,../../History_PL/2012-12-09-105230.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+0,12,37,../../History_PL/2012-12-09-105230.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+0,14,15,../../History_PL/2013-04-26-182231.bin,../../History_PL/2012-12-29-120820.bin,Distance: 0.000000 km
+0,14,16,../../History_PL/2013-04-26-182231.bin,../../History_PL/2013-03-03-183159.bin,Distance: 0.000000 km
+0,14,17,../../History_PL/2013-04-26-182231.bin,../../History_PL/2013-01-26-110203.bin,Distance: 0.000000 km
+0,14,18,../../History_PL/2013-04-26-182231.bin,../../History_PL/2013-01-27-111209.bin,Distance: 0.000000 km
+0,14,19,../../History_PL/2013-04-26-182231.bin,../../History_PL/2013-03-09-180040.bin,Distance: 0.000000 km
+0,14,20,../../History_PL/2013-04-26-182231.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+0,14,21,../../History_PL/2013-04-26-182231.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+0,14,22,../../History_PL/2013-04-26-182231.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+0,14,23,../../History_PL/2013-04-26-182231.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+0,14,24,../../History_PL/2013-04-26-182231.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+0,14,25,../../History_PL/2013-04-26-182231.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+0,14,26,../../History_PL/2013-04-26-182231.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+0,14,27,../../History_PL/2013-04-26-182231.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+0,14,28,../../History_PL/2013-04-26-182231.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+0,14,29,../../History_PL/2013-04-26-182231.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+0,14,30,../../History_PL/2013-04-26-182231.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+0,14,31,../../History_PL/2013-04-26-182231.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+0,14,32,../../History_PL/2013-04-26-182231.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+0,14,33,../../History_PL/2013-04-26-182231.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+0,14,34,../../History_PL/2013-04-26-182231.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+0,14,35,../../History_PL/2013-04-26-182231.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+0,14,36,../../History_PL/2013-04-26-182231.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+0,14,37,../../History_PL/2013-04-26-182231.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+0,16,17,../../History_PL/2013-03-03-183159.bin,../../History_PL/2013-01-26-110203.bin,Distance: 0.000000 km
+0,16,18,../../History_PL/2013-03-03-183159.bin,../../History_PL/2013-01-27-111209.bin,Distance: 0.000000 km
+0,16,19,../../History_PL/2013-03-03-183159.bin,../../History_PL/2013-03-09-180040.bin,Distance: 0.000000 km
+0,16,20,../../History_PL/2013-03-03-183159.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+0,16,21,../../History_PL/2013-03-03-183159.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+0,16,22,../../History_PL/2013-03-03-183159.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+0,16,23,../../History_PL/2013-03-03-183159.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+0,16,24,../../History_PL/2013-03-03-183159.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+0,16,25,../../History_PL/2013-03-03-183159.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+0,16,26,../../History_PL/2013-03-03-183159.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+0,16,27,../../History_PL/2013-03-03-183159.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+0,16,28,../../History_PL/2013-03-03-183159.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+0,16,29,../../History_PL/2013-03-03-183159.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+0,16,30,../../History_PL/2013-03-03-183159.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+0,16,31,../../History_PL/2013-03-03-183159.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+0,16,32,../../History_PL/2013-03-03-183159.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+0,16,33,../../History_PL/2013-03-03-183159.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+0,16,34,../../History_PL/2013-03-03-183159.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+0,16,35,../../History_PL/2013-03-03-183159.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+0,16,36,../../History_PL/2013-03-03-183159.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+0,16,37,../../History_PL/2013-03-03-183159.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+0,18,19,../../History_PL/2013-01-27-111209.bin,../../History_PL/2013-03-09-180040.bin,Distance: 0.000000 km
+0,18,20,../../History_PL/2013-01-27-111209.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+0,18,21,../../History_PL/2013-01-27-111209.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+0,18,22,../../History_PL/2013-01-27-111209.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+0,18,23,../../History_PL/2013-01-27-111209.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+0,18,24,../../History_PL/2013-01-27-111209.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+0,18,25,../../History_PL/2013-01-27-111209.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+0,18,26,../../History_PL/2013-01-27-111209.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+0,18,27,../../History_PL/2013-01-27-111209.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+0,18,28,../../History_PL/2013-01-27-111209.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+0,18,29,../../History_PL/2013-01-27-111209.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+0,18,30,../../History_PL/2013-01-27-111209.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+0,18,31,../../History_PL/2013-01-27-111209.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+1,11,23,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+1,11,24,../../History_PL/2012-12-07-114752.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+1,11,25,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+1,11,26,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+1,11,27,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+1,11,28,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+1,11,29,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+1,11,30,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+1,11,31,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+1,11,32,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+1,11,33,../../History_PL/2012-12-07-114752.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+1,11,34,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+1,11,35,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+1,11,36,../../History_PL/2012-12-07-114752.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+1,11,37,../../History_PL/2012-12-07-114752.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+1,13,14,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-04-26-182231.bin,Distance: 0.000000 km
+1,13,15,../../History_PL/2012-12-24-114515.bin,../../History_PL/2012-12-29-120820.bin,Distance: 0.000000 km
+1,13,16,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-03-03-183159.bin,Distance: 0.000000 km
+1,13,17,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-01-26-110203.bin,Distance: 0.000000 km
+1,13,18,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-01-27-111209.bin,Distance: 0.000000 km
+1,13,19,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-03-09-180040.bin,Distance: 0.000000 km
+1,13,20,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+1,13,21,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+1,13,22,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+1,13,23,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+1,13,24,../../History_PL/2012-12-24-114515.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+1,13,25,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+1,13,26,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+1,13,27,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+1,13,28,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+1,13,29,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+1,13,30,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+1,13,31,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+1,13,32,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+1,13,33,../../History_PL/2012-12-24-114515.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+1,13,34,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+1,13,35,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+1,13,36,../../History_PL/2012-12-24-114515.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+1,13,37,../../History_PL/2012-12-24-114515.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+1,15,16,../../History_PL/2012-12-29-120820.bin,../../History_PL/2013-03-03-183159.bin,Distance: 0.000000 km
+1,15,17,../../History_PL/2012-12-29-120820.bin,../../History_PL/2013-01-26-110203.bin,Distance: 0.000000 km
+1,15,18,../../History_PL/2012-12-29-120820.bin,../../History_PL/2013-01-27-111209.bin,Distance: 0.000000 km
+1,15,19,../../History_PL/2012-12-29-120820.bin,../../History_PL/2013-03-09-180040.bin,Distance: 0.000000 km
+1,15,20,../../History_PL/2012-12-29-120820.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+1,15,21,../../History_PL/2012-12-29-120820.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+1,15,22,../../History_PL/2012-12-29-120820.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+1,15,23,../../History_PL/2012-12-29-120820.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+1,15,24,../../History_PL/2012-12-29-120820.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+1,15,25,../../History_PL/2012-12-29-120820.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+1,15,26,../../History_PL/2012-12-29-120820.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+1,15,27,../../History_PL/2012-12-29-120820.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+1,15,28,../../History_PL/2012-12-29-120820.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+0,18,32,../../History_PL/2013-01-27-111209.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+0,18,33,../../History_PL/2013-01-27-111209.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+0,18,34,../../History_PL/2013-01-27-111209.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+0,18,35,../../History_PL/2013-01-27-111209.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+0,18,36,../../History_PL/2013-01-27-111209.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+0,18,37,../../History_PL/2013-01-27-111209.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+0,20,21,../../History_PL/2013-01-05-143744.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+0,20,22,../../History_PL/2013-01-05-143744.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+0,20,23,../../History_PL/2013-01-05-143744.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+0,20,24,../../History_PL/2013-01-05-143744.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+0,20,25,../../History_PL/2013-01-05-143744.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+0,20,26,../../History_PL/2013-01-05-143744.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+0,20,27,../../History_PL/2013-01-05-143744.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+0,20,28,../../History_PL/2013-01-05-143744.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+0,20,29,../../History_PL/2013-01-05-143744.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+0,20,30,../../History_PL/2013-01-05-143744.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+0,20,31,../../History_PL/2013-01-05-143744.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+0,20,32,../../History_PL/2013-01-05-143744.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+0,20,33,../../History_PL/2013-01-05-143744.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+0,20,34,../../History_PL/2013-01-05-143744.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+0,20,35,../../History_PL/2013-01-05-143744.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+0,20,36,../../History_PL/2013-01-05-143744.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+0,20,37,../../History_PL/2013-01-05-143744.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+1,15,29,../../History_PL/2012-12-29-120820.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+1,15,30,../../History_PL/2012-12-29-120820.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+1,15,31,../../History_PL/2012-12-29-120820.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+1,15,32,../../History_PL/2012-12-29-120820.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+1,15,33,../../History_PL/2012-12-29-120820.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+1,15,34,../../History_PL/2012-12-29-120820.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+1,15,35,../../History_PL/2012-12-29-120820.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+1,15,36,../../History_PL/2012-12-29-120820.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+1,15,37,../../History_PL/2012-12-29-120820.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+1,17,18,../../History_PL/2013-01-26-110203.bin,../../History_PL/2013-01-27-111209.bin,Distance: 0.000000 km
+1,17,19,../../History_PL/2013-01-26-110203.bin,../../History_PL/2013-03-09-180040.bin,Distance: 0.000000 km
+1,17,20,../../History_PL/2013-01-26-110203.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+1,17,21,../../History_PL/2013-01-26-110203.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+1,17,22,../../History_PL/2013-01-26-110203.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+1,17,23,../../History_PL/2013-01-26-110203.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+1,17,24,../../History_PL/2013-01-26-110203.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+1,17,25,../../History_PL/2013-01-26-110203.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+1,17,26,../../History_PL/2013-01-26-110203.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+1,17,27,../../History_PL/2013-01-26-110203.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+1,17,28,../../History_PL/2013-01-26-110203.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+1,17,29,../../History_PL/2013-01-26-110203.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+1,17,30,../../History_PL/2013-01-26-110203.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+1,17,31,../../History_PL/2013-01-26-110203.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+1,17,32,../../History_PL/2013-01-26-110203.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+1,17,33,../../History_PL/2013-01-26-110203.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+1,17,34,../../History_PL/2013-01-26-110203.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+1,17,35,../../History_PL/2013-01-26-110203.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+1,17,36,../../History_PL/2013-01-26-110203.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+1,17,37,../../History_PL/2013-01-26-110203.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+1,19,20,../../History_PL/2013-03-09-180040.bin,../../History_PL/2013-01-05-143744.bin,Distance: 0.000000 km
+1,19,21,../../History_PL/2013-03-09-180040.bin,../../History_PL/2013-05-01-100146.bin,Distance: 0.000000 km
+1,19,22,../../History_PL/2013-03-09-180040.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+1,19,23,../../History_PL/2013-03-09-180040.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+1,19,24,../../History_PL/2013-03-09-180040.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+1,19,25,../../History_PL/2013-03-09-180040.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+1,19,26,../../History_PL/2013-03-09-180040.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+1,19,27,../../History_PL/2013-03-09-180040.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+1,19,28,../../History_PL/2013-03-09-180040.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+1,19,29,../../History_PL/2013-03-09-180040.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+1,19,30,../../History_PL/2013-03-09-180040.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+1,19,31,../../History_PL/2013-03-09-180040.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+1,19,32,../../History_PL/2013-03-09-180040.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+1,19,33,../../History_PL/2013-03-09-180040.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+1,19,34,../../History_PL/2013-03-09-180040.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+1,19,35,../../History_PL/2013-03-09-180040.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+1,19,36,../../History_PL/2013-03-09-180040.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+1,19,37,../../History_PL/2013-03-09-180040.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+1,21,22,../../History_PL/2013-05-01-100146.bin,../../History_PL/2013-04-21-092004.bin,Distance: 0.000000 km
+1,21,23,../../History_PL/2013-05-01-100146.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+1,21,24,../../History_PL/2013-05-01-100146.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+1,21,25,../../History_PL/2013-05-01-100146.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+1,21,26,../../History_PL/2013-05-01-100146.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+1,21,27,../../History_PL/2013-05-01-100146.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+1,21,28,../../History_PL/2013-05-01-100146.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+1,21,29,../../History_PL/2013-05-01-100146.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+1,21,30,../../History_PL/2013-05-01-100146.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+0,22,23,../../History_PL/2013-04-21-092004.bin,../../History_PL/2013-01-13-102709.bin,Distance: 0.000000 km
+0,22,24,../../History_PL/2013-04-21-092004.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+0,22,25,../../History_PL/2013-04-21-092004.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+0,22,26,../../History_PL/2013-04-21-092004.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+0,22,27,../../History_PL/2013-04-21-092004.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+0,22,28,../../History_PL/2013-04-21-092004.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+0,22,29,../../History_PL/2013-04-21-092004.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+0,22,30,../../History_PL/2013-04-21-092004.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+0,22,31,../../History_PL/2013-04-21-092004.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+0,22,32,../../History_PL/2013-04-21-092004.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+0,22,33,../../History_PL/2013-04-21-092004.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+0,22,34,../../History_PL/2013-04-21-092004.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+0,22,35,../../History_PL/2013-04-21-092004.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+0,22,36,../../History_PL/2013-04-21-092004.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+0,22,37,../../History_PL/2013-04-21-092004.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+0,24,25,../../History_PL/2012-12-08-160248.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+0,24,26,../../History_PL/2012-12-08-160248.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+0,24,27,../../History_PL/2012-12-08-160248.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+0,24,28,../../History_PL/2012-12-08-160248.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+0,24,29,../../History_PL/2012-12-08-160248.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+0,24,30,../../History_PL/2012-12-08-160248.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+0,24,31,../../History_PL/2012-12-08-160248.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+0,24,32,../../History_PL/2012-12-08-160248.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+0,24,33,../../History_PL/2012-12-08-160248.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+1,21,31,../../History_PL/2013-05-01-100146.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+1,21,32,../../History_PL/2013-05-01-100146.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+1,21,33,../../History_PL/2013-05-01-100146.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+1,21,34,../../History_PL/2013-05-01-100146.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+1,21,35,../../History_PL/2013-05-01-100146.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+1,21,36,../../History_PL/2013-05-01-100146.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+1,21,37,../../History_PL/2013-05-01-100146.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+1,23,24,../../History_PL/2013-01-13-102709.bin,../../History_PL/2012-12-08-160248.bin,Distance: 0.000000 km
+1,23,25,../../History_PL/2013-01-13-102709.bin,../../History_PL/2013-03-10-082140.bin,Distance: 0.000000 km
+1,23,26,../../History_PL/2013-01-13-102709.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+1,23,27,../../History_PL/2013-01-13-102709.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+1,23,28,../../History_PL/2013-01-13-102709.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+1,23,29,../../History_PL/2013-01-13-102709.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+1,23,30,../../History_PL/2013-01-13-102709.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+1,23,31,../../History_PL/2013-01-13-102709.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+1,23,32,../../History_PL/2013-01-13-102709.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+1,23,33,../../History_PL/2013-01-13-102709.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+1,23,34,../../History_PL/2013-01-13-102709.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+1,23,35,../../History_PL/2013-01-13-102709.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+1,23,36,../../History_PL/2013-01-13-102709.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+1,23,37,../../History_PL/2013-01-13-102709.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+1,25,26,../../History_PL/2013-03-10-082140.bin,../../History_PL/2013-04-19-053206.bin,Distance: 0.000000 km
+1,25,27,../../History_PL/2013-03-10-082140.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+1,25,28,../../History_PL/2013-03-10-082140.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+1,25,29,../../History_PL/2013-03-10-082140.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+1,25,30,../../History_PL/2013-03-10-082140.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+1,25,31,../../History_PL/2013-03-10-082140.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+1,25,32,../../History_PL/2013-03-10-082140.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+1,25,33,../../History_PL/2013-03-10-082140.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+1,25,34,../../History_PL/2013-03-10-082140.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+1,25,35,../../History_PL/2013-03-10-082140.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+1,25,36,../../History_PL/2013-03-10-082140.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+1,25,37,../../History_PL/2013-03-10-082140.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+1,27,28,../../History_PL/2013-04-13-072012.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+1,27,29,../../History_PL/2013-04-13-072012.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+1,27,30,../../History_PL/2013-04-13-072012.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+1,27,31,../../History_PL/2013-04-13-072012.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+1,27,32,../../History_PL/2013-04-13-072012.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+1,27,33,../../History_PL/2013-04-13-072012.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+1,27,34,../../History_PL/2013-04-13-072012.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+1,27,35,../../History_PL/2013-04-13-072012.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+1,27,36,../../History_PL/2013-04-13-072012.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+1,27,37,../../History_PL/2013-04-13-072012.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+1,29,30,../../History_PL/2013-03-30-181245.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+1,29,31,../../History_PL/2013-03-30-181245.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+1,29,32,../../History_PL/2013-03-30-181245.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+1,29,33,../../History_PL/2013-03-30-181245.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+1,29,34,../../History_PL/2013-03-30-181245.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+1,29,35,../../History_PL/2013-03-30-181245.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+1,29,36,../../History_PL/2013-03-30-181245.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+1,29,37,../../History_PL/2013-03-30-181245.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+1,31,32,../../History_PL/2013-04-25-192822.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+1,31,33,../../History_PL/2013-04-25-192822.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+1,31,34,../../History_PL/2013-04-25-192822.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+1,31,35,../../History_PL/2013-04-25-192822.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+1,31,36,../../History_PL/2013-04-25-192822.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+0,24,34,../../History_PL/2012-12-08-160248.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+0,24,35,../../History_PL/2012-12-08-160248.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+0,24,36,../../History_PL/2012-12-08-160248.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+0,24,37,../../History_PL/2012-12-08-160248.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+0,26,27,../../History_PL/2013-04-19-053206.bin,../../History_PL/2013-04-13-072012.bin,Distance: 0.000000 km
+0,26,28,../../History_PL/2013-04-19-053206.bin,../../History_PL/2013-02-03-111209.bin,Distance: 0.000000 km
+0,26,29,../../History_PL/2013-04-19-053206.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+0,26,30,../../History_PL/2013-04-19-053206.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+0,26,31,../../History_PL/2013-04-19-053206.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+0,26,32,../../History_PL/2013-04-19-053206.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+0,26,33,../../History_PL/2013-04-19-053206.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+0,26,34,../../History_PL/2013-04-19-053206.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+0,26,35,../../History_PL/2013-04-19-053206.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+0,26,36,../../History_PL/2013-04-19-053206.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+0,26,37,../../History_PL/2013-04-19-053206.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+0,28,29,../../History_PL/2013-02-03-111209.bin,../../History_PL/2013-03-30-181245.bin,Distance: 0.000000 km
+0,28,30,../../History_PL/2013-02-03-111209.bin,../../History_PL/2013-03-22-053407.bin,Distance: 0.000000 km
+0,28,31,../../History_PL/2013-02-03-111209.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+0,28,32,../../History_PL/2013-02-03-111209.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+0,28,33,../../History_PL/2013-02-03-111209.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+0,28,34,../../History_PL/2013-02-03-111209.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+0,28,35,../../History_PL/2013-02-03-111209.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+0,28,36,../../History_PL/2013-02-03-111209.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+0,28,37,../../History_PL/2013-02-03-111209.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+0,30,31,../../History_PL/2013-03-22-053407.bin,../../History_PL/2013-04-25-192822.bin,Distance: 0.000000 km
+1,31,37,../../History_PL/2013-04-25-192822.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+1,33,34,../../History_PL/2012-12-25-112057.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+1,33,35,../../History_PL/2012-12-25-112057.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+1,33,36,../../History_PL/2012-12-25-112057.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+1,33,37,../../History_PL/2012-12-25-112057.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+1,35,36,../../History_PL/2013-03-16-072137.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+1,35,37,../../History_PL/2013-03-16-072137.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+0,30,32,../../History_PL/2013-03-22-053407.bin,../../History_PL/2013-02-09-114955.bin,Distance: 0.000000 km
+0,30,33,../../History_PL/2013-03-22-053407.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+0,30,34,../../History_PL/2013-03-22-053407.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+0,30,35,../../History_PL/2013-03-22-053407.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+0,30,36,../../History_PL/2013-03-22-053407.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+0,30,37,../../History_PL/2013-03-22-053407.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+0,32,33,../../History_PL/2013-02-09-114955.bin,../../History_PL/2012-12-25-112057.bin,Distance: 0.000000 km
+0,32,34,../../History_PL/2013-02-09-114955.bin,../../History_PL/2013-04-23-053312.bin,Distance: 0.000000 km
+0,32,35,../../History_PL/2013-02-09-114955.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+0,32,36,../../History_PL/2013-02-09-114955.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+0,32,37,../../History_PL/2013-02-09-114955.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+0,34,35,../../History_PL/2013-04-23-053312.bin,../../History_PL/2013-03-16-072137.bin,Distance: 0.000000 km
+0,34,36,../../History_PL/2013-04-23-053312.bin,../../History_PL/2013-04-05-190925.bin,Distance: 0.000000 km
+0,34,37,../../History_PL/2013-04-23-053312.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km
+0,36,37,../../History_PL/2013-04-05-190925.bin,../../History_PL/2012-12-31-094856.bin,Distance: 0.000000 km

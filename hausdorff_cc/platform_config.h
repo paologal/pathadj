@@ -31,7 +31,6 @@
 #define likely(x)       (x)
 #define unlikely(x)     (x)
 #elif __linux__
-#include <omp.h>
 #include <dirent.h>
 #include <unistd.h>
 
