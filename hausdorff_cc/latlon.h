@@ -25,7 +25,12 @@
 #ifndef LATLON_H_
 #define LATLON_H_
 
+#include <memory>
+
 #include "adj_path.h"
+#include "adj_user_paths.h"
+
+using std::shared_ptr;
 
 class latlon {
  public:
@@ -33,15 +38,19 @@ class latlon {
     virtual ~latlon();
 
     static float haversine(const path_point_t* p0, const path_point_t* p1);
+    static void hausdorff_distance(const shared_ptr<adj_user_paths> paths,
+                                   uint32_t j, uint32_t i);
+ private:
     static float hausdorff(const adj_path& p0, const adj_path& p1);
     static float hausdorff_test(const adj_path& p0, const adj_path& p1);
 
     static const float RADIANS;
     static const float EARTH_RADIUS;
 
- private:
-    static float hausdorff_impl(const float* results, uint32_t row, uint32_t col);
+    static float hausdorff_impl(const float* results, uint32_t row,
+                                uint32_t col);
     static float hausdorff_impl_test(const adj_path& p0, const adj_path& p1);
-};
+}
+;
 
 #endif /* LATLON_H_ */

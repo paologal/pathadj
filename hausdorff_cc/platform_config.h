@@ -45,5 +45,6 @@
 #endif
 
 #include <cmath>
+#include <cassert>
 
 #endif  /* PLATFORM_CONFIG_H_ */

@@ -83,6 +83,25 @@ float latlon::hausdorff_impl_test(const adj_path& p0, const adj_path& p1) {
     return max_dist;
 }
 
+void latlon::hausdorff_distance(const shared_ptr<adj_user_paths> paths,
+                                uint32_t j, uint32_t i) {
+    const shared_ptr<adj_path> path0(paths->get_path(j));
+    const shared_ptr<adj_path> path1(paths->get_path(i));
+    float dist = latlon::hausdorff(*path0, *path1);
+#ifdef UNIT_TEST
+    float dist_test = latlon::hausdorff_test(*path0, *path1);
+    uint32_t* p_dist = (uint32_t*)&dist;
+    uint32_t* p_dist_test = (uint32_t*)&dist_test;
+    if (dist != dist_test) {
+        printf("ERROR %x\n", *p_dist ^ *p_dist_test);
+    }
+    assert((*p_dist ^ *p_dist_test) < 4);
+#endif /* UNIT_TEST */
+    printf("%d,%d,%s,%s,Distance: %f km\n", j, i,
+           path0->get_path_name().c_str(), path1->get_path_name().c_str(),
+           dist);
+}
+
 float latlon::hausdorff(const adj_path& p0, const adj_path& p1) {
     uint32_t points0 = p0.get_points_number();
     uint32_t points1 = p1.get_points_number();
@@ -91,7 +110,7 @@ float latlon::hausdorff(const adj_path& p0, const adj_path& p1) {
     for (uint32_t i = 0; i < points0; i++) {
         for (uint32_t j = 0; j < points1; j++) {
             results[i * points1 + j] = latlon::haversine(p0.get_point(i),
-                                               p1.get_point(j));
+                                                         p1.get_point(j));
         }
     }
 

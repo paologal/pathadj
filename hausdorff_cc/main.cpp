@@ -21,33 +21,28 @@
  *      Author: Paolo Galbiati
  */
 
-#include "cassert"
 #include <thread>
 
 #include "adj_path.h"
 #include "adj_user_paths.h"
 #include "latlon.h"
 
+using std::thread;
+
 #define SCAN_DIR
 
-void compute_subset(const shared_ptr<adj_user_paths> paths, uint32_t size, uint32_t start, uint32_t step) {
-    for (uint32_t j = start; j < size; j += step) {
+void compute_subset(const shared_ptr<adj_user_paths> paths, uint32_t size,
+                    uint32_t start, uint32_t step) {
+    for (uint32_t j = start; j < size / 2; j += step) {
+//        printf("%d, Computing column %d, %d elements\n", start, j, size - (j + 1));
         for (uint32_t i = j + 1; i < size; ++i) {
-            const shared_ptr<adj_path> path0(paths->get_path(j));
-            const shared_ptr<adj_path> path1(paths->get_path(i));
-            float dist = latlon::hausdorff(*path0, *path1);
-#ifdef UNIT_TEST
-            float dist_test = latlon::hausdorff_test(*path0, *path1);
-            uint32_t* p_dist = (uint32_t*)&dist;
-            uint32_t* p_dist_test = (uint32_t*)&dist_test;
-            if (dist != dist_test) {
-                printf("ERROR %x\n", *p_dist ^ *p_dist_test);
+            latlon::hausdorff_distance(paths, j, i);
+        }
+        if (j != size - j - 2) {
+//            printf("%d, Computing column %d, %d elements\n", start, size - j - 2, size - (size - j - 1));
+            for (uint32_t i = size - j - 1; i < size; ++i) {
+                latlon::hausdorff_distance(paths, size - j - 2, i);
             }
-            assert((*p_dist ^ *p_dist_test) < 4);
-#endif /* UNIT_TEST */
-            printf("%d,%d,%d,%s,%s,Distance: %f km\n", start, j, i,
-                    path0->get_path_name().c_str(),
-                    path1->get_path_name().c_str(), dist);
         }
     }
 }
@@ -72,8 +67,8 @@ int main(int argc, char** argv) {
         const shared_ptr<adj_path> path1(paths1.get_path(i));
         float dist = latlon::hausdorff(*path0, *path1);
         printf("%d,%s,%s,Distance: %f km\n", i,
-               path0->get_path_name().c_str(), path1->get_path_name().c_str(),
-               dist);
+                path0->get_path_name().c_str(), path1->get_path_name().c_str(),
+                dist);
     }
 
     path0->reset();
@@ -81,23 +76,30 @@ int main(int argc, char** argv) {
 #endif /* SCAN_FILE */
 
 #ifdef SCAN_DIR
-    if (argc < 3) {
-        printf("Usage: %s threads directories\n", argv[0]);
+    if (argc < 2) {
+        printf("Usage: %s directories\n", argv[0]);
         return 0;
     }
 
-    std::vector<std::thread> threads;
-    uint32_t num_of_threads = atoi(argv[1]);
+    std::vector < thread > threads;
+    uint32_t max_threads = 2 * thread::hardware_concurrency();
     for (int32_t i = 1; i < argc; ++i) {
         const shared_ptr<adj_user_paths> paths0(new adj_user_paths(argv[i]));
         paths0->load_paths();
         uint32_t size0 = paths0->get_paths_number();
 
+        uint32_t num_of_threads = max_threads;
+        if ((size0 >> 1) < num_of_threads) {
+            num_of_threads = size0 >> 1;
+        }
+
         if (size0 > 1) {
             for (int32_t j = 0; j < num_of_threads; ++j) {
-                threads.push_back(std::thread(compute_subset, paths0, size0, j, num_of_threads));
+                threads.push_back(
+                        thread(compute_subset, paths0, size0, j,
+                               num_of_threads));
             }
-            for(auto& thread : threads) {
+            for (auto& thread : threads) {
                 thread.join();
             }
         }
