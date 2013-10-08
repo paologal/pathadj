@@ -102,6 +102,7 @@ void latlon::hausdorff_distance(const shared_ptr<adj_user_paths> paths,
 float latlon::hausdorff(const adj_path& p0, const adj_path& p1) {
     uint32_t points0 = p0.get_points_number();
     uint32_t points1 = p1.get_points_number();
+    float* result_buffer = nullptr;
     float* results = new float[points0 * points1];
 
     for (uint32_t i = 0; i < points0; i++) {

@@ -28,6 +28,7 @@
 
 adj_path::adj_path(const string& file)
         : path_data(nullptr),
+          device_data(nullptr),
           file_name(file),
           cumulated_distance(0.0) {
     memset(&mean_point, 0, sizeof(mean_point));
