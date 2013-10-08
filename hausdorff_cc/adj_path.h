@@ -25,13 +25,7 @@
 #ifndef ADJPATHFILE_H_
 #define ADJPATHFILE_H_
 
-#include <stdint.h>
-#include <cstring>
-#include <string>
-
 #include "platform_config.h"
-
-using std::string;
 
 typedef struct path_point {
     float lat;

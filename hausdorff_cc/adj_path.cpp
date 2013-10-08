@@ -22,20 +22,9 @@
  *      Author: Paolo Galbiati
  */
 
-#include <sys/types.h>
-#include <sys/stat.h>
-
-#include <cstdio>
-#include <algorithm>
-#include <vector>
-#include <string>
-
 #include "platform_config.h"
 #include "adj_path.h"
 #include "latlon.h"
-
-using std::vector;
-using std::string;
 
 adj_path::adj_path(const string& file)
         : path_data(nullptr),
@@ -68,13 +57,13 @@ bool adj_path::verify_file_size(uint32_t file_size) {
 
     if (points == 0) {
         /* Error handling */
-        printf("Empty file!\n");
+        TRACE_ERROR("Empty file!\n");
         return false;
     }
 
     if (points != check) {
         /* Error handling */
-        printf("Invalid coordinates %d, expected %d\n", check, points);
+        TRACE_ERROR("Invalid coordinates %d, expected %d\n", check, points);
         return false;
     }
 
@@ -84,15 +73,15 @@ bool adj_path::verify_file_size(uint32_t file_size) {
 bool adj_path::verify_file() {
     if (path.points_check != path.points) {
         /* Error handling */
-        printf("Invalid coordinates checksum %d, expected %d\n",
-               path.points_check, path.points);
+        TRACE_ERROR("Invalid coordinates checksum %d, expected %d\n",
+                    path.points_check, path.points);
         return false;
     }
 
     if (PATH_FILE_CHECKSUM != path.checksum) {
         /* Error handling */
-        printf("Invalid file checksum %d, expected %d\n", path.checksum,
-               PATH_FILE_CHECKSUM);
+        TRACE_ERROR("Invalid file checksum %d, expected %d\n", path.checksum,
+                    PATH_FILE_CHECKSUM);
         return false;
     }
 
@@ -102,7 +91,7 @@ bool adj_path::verify_file() {
 bool adj_path::load_file() {
     struct stat info;
     if (0 != stat(file_name.c_str(), &info)) {
-        printf("Cannot stat %s\n", file_name.c_str());
+        TRACE_ERROR("Cannot stat %s\n", file_name.c_str());
         reset();
         return false;
     }
@@ -111,7 +100,7 @@ bool adj_path::load_file() {
     memset(path_data, 0, info.st_size);
     if (nullptr == path_data) {
         /* Error handling */
-        printf("Cannot allocate %d bytes\n", (uint32_t) info.st_size);
+        TRACE_ERROR("Cannot allocate %d bytes\n", (uint32_t) info.st_size);
         reset();
         return false;
     }
@@ -119,7 +108,7 @@ bool adj_path::load_file() {
     FILE *fp = fopen(file_name.c_str(), "rb");
     if (nullptr == fp) {
         /* Error handling */
-        printf("Cannot open %s\n", file_name.c_str());
+        TRACE_ERROR("Cannot open %s\n", file_name.c_str());
         reset();
         return false;
     }
@@ -129,16 +118,16 @@ bool adj_path::load_file() {
     fclose(fp);
     if (1 != blocks_read) {
         /* Error handling */
-        printf("Cannot read %d bytes from %s\n", (uint32_t) info.st_size,
-               file_name.c_str());
+        TRACE_ERROR("Cannot read %d bytes from %s\n", (uint32_t) info.st_size,
+                    file_name.c_str());
         reset();
         return false;
     }
 
     path.points = *reinterpret_cast<uint32_t*>(path_data);
     if (true != verify_file_size((uint32_t) info.st_size)) {
-        printf("File %s: invalid file size %d\n", file_name.c_str(),
-               (uint32_t) info.st_size);
+        TRACE_ERROR("File %s: invalid file size %d\n", file_name.c_str(),
+                    (uint32_t) info.st_size);
         reset();
         return false;
     }
@@ -152,47 +141,44 @@ bool adj_path::load_file() {
             + sizeof(path.points_check));
 
     if (true != verify_file()) {
-        printf("Invalid file %s\n", file_name.c_str());
+        TRACE_ERROR("Invalid file %s\n", file_name.c_str());
         reset();
         return false;
     }
 
-    // dump();
+    dump();
     init();
 
     return true;
 }
 
 void adj_path::dump() {
-    printf("Filename: %s\n", file_name.c_str());
+#ifdef DEBUG_DUMP
+    TRACE_DEBUG("Filename: %s\n", file_name.c_str());
     for (uint32_t i = 0; i < path.points; ++i) {
-        printf("Point %d. Latitude %f, Longitude %f\n", i,
-               path.coordinates[i].lat, path.coordinates[i].lon);
+        TRACE_DEBUG("Point %d. Latitude %f, Longitude %f\n", i,
+                path.coordinates[i].lat, path.coordinates[i].lon);
     }
+#endif /* DEBUG_DUMP */
 }
 
 void adj_path::init() {
     float sum_lat = 0.0;
     float sum_lon = 0.0;
     path_point_t* p0;
-    vector<float> lat_sorted;
-    vector<float> lon_sorted;
 
     cumulated_distance = 0.0;
     if (path.points) {
         for (uint32_t i = 0; i < path.points - 1; ++i) {
             p0 = get_point(i);
 
-            lat_sorted.push_back(p0->lat);
-            lon_sorted.push_back(p0->lon);
             sum_lat += p0->lat;
             sum_lon += p0->lon;
+#ifdef DEBUG_DUMP
             cumulated_distance += latlon::haversine(p0, get_point(i + 1));
+#endif
         }
     }
-
-    sort(lat_sorted.begin(), lat_sorted.end());
-    sort(lon_sorted.begin(), lon_sorted.end());
 
     if (path.points % 2) {
         path_point_t* p0 = get_point((path.points + 1) / 2);
@@ -208,8 +194,14 @@ void adj_path::init() {
     mean_point.lat = sum_lat / path.points;
     mean_point.lon = sum_lon / path.points;
 
-//    printf("Filename: %s\n", file_name.c_str());
-//    printf("Points %d. Total distance %f.\n", path.points, cumulated_distance);
-//    printf("Mean point(%f, %f) radians\n", mean_point.lat, mean_point.lon);
-//    printf("Median point(%f, %f) radians\n", median_point.lat, median_point.lon);
+    TRACE_DEBUG("Filename: %s\n", file_name.c_str());
+    TRACE_DEBUG("Points %d. Total distance %f.\n",
+                path.points,
+                cumulated_distance);
+    TRACE_DEBUG("Mean point(%f, %f) radians\n",
+                mean_point.lat,
+                mean_point.lon);
+    TRACE_DEBUG("Median point(%f, %f) radians\n",
+                median_point.lat,
+                median_point.lon);
 }

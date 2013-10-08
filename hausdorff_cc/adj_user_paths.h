@@ -25,14 +25,7 @@
 #ifndef ADJ_USER_PATHS_H_
 #define ADJ_USER_PATHS_H_
 
-#include <string>
-#include <vector>
-#include <memory>
-
 #include "adj_path.h"
-
-using std::vector;
-using std::shared_ptr;
 
 class adj_user_paths {
  public:
@@ -44,7 +37,7 @@ class adj_user_paths {
     void reset();
 
     inline uint32_t get_paths_number() const {
-        return file_array.size();
+        return static_cast<uint32_t>(file_array.size());
     }
 
     inline const shared_ptr<adj_path> get_path(uint32_t index) const {

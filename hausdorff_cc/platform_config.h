@@ -22,12 +22,36 @@
  *      Author: Paolo Galbiati
  */
 
+#include <stdint.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+
+#include <cstring>
+#include <cstdio>
+#include <cassert>
+#include <cmath>
+
+#include <limits>
+#include <memory>
+#include <thread>
+#include <vector>
+#include <string>
+
+
+using std::vector;
+using std::string;
+using std::shared_ptr;
+using std::thread;
+using std::numeric_limits;
+
+
 #ifndef PLATFORM_CONFIG_H_
 #define PLATFORM_CONFIG_H_
 
 #ifdef _WIN32
 #define _USE_MATH_DEFINES
 #include <windows.h>
+#undef max
 #define likely(x)       (x)
 #define unlikely(x)     (x)
 #elif __linux__
@@ -44,7 +68,11 @@
 #endif
 #endif
 
-#include <cmath>
-#include <cassert>
-
+#define TRACE_INFO printf
+#define TRACE_ERROR printf
+#ifdef DEBUG_DUMP
+#define TRACE_DEBUG printf
+#else
+#define TRACE_DEBUG
+#endif
 #endif  /* PLATFORM_CONFIG_H_ */

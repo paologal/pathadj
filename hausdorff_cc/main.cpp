@@ -34,12 +34,18 @@ using std::thread;
 void compute_subset(const shared_ptr<adj_user_paths> paths, uint32_t size,
                     uint32_t start, uint32_t step) {
     for (uint32_t j = start; j < size / 2; j += step) {
-//        printf("%d, Computing column %d, %d elements\n", start, j, size - (j + 1));
+        TRACE_DEBUG("%d, Computing column %d, %d elements\n",
+                    start,
+                    j,
+                    size - (j + 1));
         for (uint32_t i = j + 1; i < size; ++i) {
             latlon::hausdorff_distance(paths, j, i);
         }
         if (j != size - j - 2) {
-//            printf("%d, Computing column %d, %d elements\n", start, size - j - 2, size - (size - j - 1));
+            TRACE_DEBUG("%d, Computing column %d, %d elements\n",
+                        start,
+                        size - j - 2,
+                        size - (size - j - 1));
             for (uint32_t i = size - j - 1; i < size; ++i) {
                 latlon::hausdorff_distance(paths, size - j - 2, i);
             }
@@ -94,7 +100,7 @@ int main(int argc, char** argv) {
         }
 
         if (size0 > 1) {
-            for (int32_t j = 0; j < num_of_threads; ++j) {
+            for (uint32_t j = 0; j < num_of_threads; ++j) {
                 threads.push_back(
                         thread(compute_subset, paths0, size0, j,
                                num_of_threads));

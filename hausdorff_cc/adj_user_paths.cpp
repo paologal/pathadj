@@ -22,9 +22,6 @@
  *      Author: Paolo Galbiati
  */
 
-#include <cstdio>
-#include <vector>
-#include <string>
 
 #include "platform_config.h"
 #include "adj_user_paths.h"
@@ -70,7 +67,7 @@ void adj_user_paths::load_paths() {
             string filename = dir_path + find_data.cFileName;
             this->load_path(filename);
         }
-		while (FindNextFile(hFind, &find_data) != 0);
+        while (FindNextFile(hFind, &find_data) != 0) {}
 
         DWORD dwError = GetLastError();
         if (dwError != ERROR_NO_MORE_FILES) {
@@ -79,9 +76,9 @@ void adj_user_paths::load_paths() {
 
         FindClose(hFind);
     }
-#endif /* __linux__ */
+#endif /* _WIN32 */
 
-    printf("Found %d paths\n", (int32_t) file_array.size());
+    TRACE_INFO("Found %d paths\n", (int32_t) file_array.size());
 }
 
 void adj_user_paths::load_path(const string& filename) {

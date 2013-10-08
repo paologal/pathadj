@@ -25,12 +25,8 @@
 #ifndef LATLON_H_
 #define LATLON_H_
 
-#include <memory>
-
 #include "adj_path.h"
 #include "adj_user_paths.h"
-
-using std::shared_ptr;
 
 class latlon {
  public:
@@ -50,7 +46,7 @@ class latlon {
     static float hausdorff_impl(const float* results, uint32_t row,
                                 uint32_t col);
     static float hausdorff_impl_test(const adj_path& p0, const adj_path& p1);
-}
-;
+};
+
 
 #endif /* LATLON_H_ */

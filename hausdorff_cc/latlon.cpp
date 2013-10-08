@@ -22,12 +22,9 @@
  *      Author: Paolo Galbiati
  */
 
-#include <climits>
-
 #include "platform_config.h"
 #include "latlon.h"
 
-const float latlon::RADIANS = M_PI / 180.0f;
 const float latlon::EARTH_RADIUS = 6371.0f;
 
 latlon::latlon() {
@@ -63,12 +60,12 @@ float latlon::hausdorff_test(const adj_path& p0, const adj_path& p1) {
 float latlon::hausdorff_impl_test(const adj_path& p0, const adj_path& p1) {
     uint32_t points0 = p0.get_points_number();
     uint32_t points1 = p1.get_points_number();
-    float min_dist = INT_MAX;
+    float min_dist = numeric_limits<float>::max();
     float max_dist = 0.0;
     float curr_dist = 0.0;
 
     for (uint32_t i = 0; i < points0; i++) {
-        min_dist = INT_MAX;
+        min_dist = numeric_limits<float>::max();
         for (uint32_t j = 0; j < points1; j++) {
             curr_dist = latlon::haversine(p0.get_point(i), p1.get_point(j));
             if (curr_dist < min_dist) {
@@ -90,14 +87,14 @@ void latlon::hausdorff_distance(const shared_ptr<adj_user_paths> paths,
     float dist = latlon::hausdorff(*path0, *path1);
 #ifdef UNIT_TEST
     float dist_test = latlon::hausdorff_test(*path0, *path1);
-    uint32_t* p_dist = (uint32_t*)&dist;
-    uint32_t* p_dist_test = (uint32_t*)&dist_test;
+    uint32_t* p_dist = reinterpret_cast<uint32_t*>(&dist);
+    uint32_t* p_dist_test = reinterpret_cast<uint32_t*>(&dist_test);
     if (dist != dist_test) {
-        printf("ERROR %x\n", *p_dist ^ *p_dist_test);
+        TRACE_ERROR("ERROR %x\n", *p_dist ^ *p_dist_test);
     }
     assert((*p_dist ^ *p_dist_test) < 4);
 #endif /* UNIT_TEST */
-    printf("%d,%d,%s,%s,Distance: %f km\n", j, i,
+    TRACE_INFO("%d,%d,%s,%s,Distance: %f km\n", j, i,
            path0->get_path_name().c_str(), path1->get_path_name().c_str(),
            dist);
 }
@@ -123,12 +120,12 @@ float latlon::hausdorff(const adj_path& p0, const adj_path& p1) {
 
 float latlon::hausdorff_impl(const float* results, uint32_t row, uint32_t col) {
     float dist_01;
-    float min_dist = INT_MAX;
+    float min_dist = numeric_limits<float>::max();;
     float max_dist = 0.0;
     float curr_dist = 0.0;
 
     for (uint32_t i = 0; i < row; i++) {
-        min_dist = INT_MAX;
+        min_dist = numeric_limits<float>::max();;
         for (uint32_t j = 0; j < col; j++) {
             curr_dist = results[i * col + j];
             if (curr_dist < min_dist) {
@@ -144,7 +141,7 @@ float latlon::hausdorff_impl(const float* results, uint32_t row, uint32_t col) {
     max_dist = 0.0;
 
     for (uint32_t i = 0; i < col; i++) {
-        min_dist = INT_MAX;
+        min_dist = numeric_limits<float>::max();;
         for (uint32_t j = 0; j < row; j++) {
             curr_dist = results[i + j * col];
             if (curr_dist < min_dist) {
