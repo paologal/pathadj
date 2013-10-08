@@ -87,8 +87,8 @@ int main(int argc, char** argv) {
         return 0;
     }
 
-    std::vector < thread > threads;
-    uint32_t max_threads = 2 * thread::hardware_concurrency();
+    vector<thread> threads;
+    uint32_t max_threads = 4 * thread::hardware_concurrency();
     for (int32_t i = 1; i < argc; ++i) {
         const shared_ptr<adj_user_paths> paths0(new adj_user_paths(argv[i]));
         paths0->load_paths();
