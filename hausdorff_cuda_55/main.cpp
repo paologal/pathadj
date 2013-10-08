@@ -70,7 +70,7 @@ int main(int argc, char** argv)
 	}
 
     vector<thread> threads;
-    uint32_t max_threads = 4 * thread::hardware_concurrency();
+    uint32_t max_threads = 16 * thread::hardware_concurrency();
     for (int32_t i = 1; i < argc; ++i) {
         const shared_ptr<adj_user_paths> paths0(new adj_user_paths(argv[i]));
         paths0->load_paths();
