@@ -21,13 +21,11 @@
  *      Author: Paolo Galbiati
  */
 
-#include <thread>
-
 #include "adj_path.h"
 #include "adj_user_paths.h"
 #include "latlon.h"
 
-using std::thread;
+
 
 #define SCAN_DIR
 

@@ -70,7 +70,7 @@ class adj_path {
  private:
     static const uint32_t PATH_FILE_CHECKSUM = 0x00ED00ED;
     uint8_t* path_data;
-	path_point_t* device_data;
+    path_point_t* device_data;
     path_file_t path;
     string file_name;
 

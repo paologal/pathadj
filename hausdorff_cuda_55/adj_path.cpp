@@ -28,7 +28,7 @@
 
 adj_path::adj_path(const string& file)
         : path_data(nullptr),
-		  device_data(nullptr),
+          device_data(nullptr),
           file_name(file),
           cumulated_distance(0.0) {
     memset(&mean_point, 0, sizeof(mean_point));
@@ -80,14 +80,14 @@ bool adj_path::verify_file() {
     if (path.points_check != path.points) {
         /* Error handling */
         TRACE_ERROR("Invalid coordinates checksum %d, expected %d\n",
-               path.points_check, path.points);
+                    path.points_check, path.points);
         return false;
     }
 
     if (PATH_FILE_CHECKSUM != path.checksum) {
         /* Error handling */
         TRACE_ERROR("Invalid file checksum %d, expected %d\n", path.checksum,
-               PATH_FILE_CHECKSUM);
+                    PATH_FILE_CHECKSUM);
         return false;
     }
 
@@ -125,7 +125,7 @@ bool adj_path::load_file() {
     if (1 != blocks_read) {
         /* Error handling */
         TRACE_ERROR("Cannot read %d bytes from %s\n", (uint32_t) info.st_size,
-               file_name.c_str());
+                    file_name.c_str());
         reset();
         return false;
     }
@@ -133,7 +133,7 @@ bool adj_path::load_file() {
     path.points = *reinterpret_cast<uint32_t*>(path_data);
     if (true != verify_file_size((uint32_t) info.st_size)) {
         TRACE_ERROR("File %s: invalid file size %d\n", file_name.c_str(),
-               (uint32_t) info.st_size);
+                    (uint32_t) info.st_size);
         reset();
         return false;
     }
@@ -180,7 +180,7 @@ void adj_path::dump() {
     TRACE_DEBUG("Filename: %s\n", file_name.c_str());
     for (uint32_t i = 0; i < path.points; ++i) {
         TRACE_DEBUG("Point %d. Latitude %f, Longitude %f\n", i,
-               path.coordinates[i].lat, path.coordinates[i].lon);
+                path.coordinates[i].lat, path.coordinates[i].lon);
     }
 #endif /* DEBUG_DUMP */
 }
@@ -218,7 +218,13 @@ void adj_path::init() {
     mean_point.lon = sum_lon / path.points;
 
     TRACE_DEBUG("Filename: %s\n", file_name.c_str());
-    TRACE_DEBUG("Points %d. Total distance %f.\n", path.points, cumulated_distance);
-    TRACE_DEBUG("Mean point(%f, %f) radians\n", mean_point.lat, mean_point.lon);
-    TRACE_DEBUG("Median point(%f, %f) radians\n", median_point.lat, median_point.lon);
+    TRACE_DEBUG("Points %d. Total distance %f.\n",
+                path.points,
+                cumulated_distance);
+    TRACE_DEBUG("Mean point(%f, %f) radians\n",
+                mean_point.lat,
+                mean_point.lon);
+    TRACE_DEBUG("Median point(%f, %f) radians\n",
+                median_point.lat,
+                median_point.lon);
 }

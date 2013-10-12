@@ -87,8 +87,8 @@ void latlon::hausdorff_distance(const shared_ptr<adj_user_paths> paths,
     float dist = latlon::hausdorff(*path0, *path1);
 #ifdef UNIT_TEST
     float dist_test = latlon::hausdorff_test(*path0, *path1);
-    uint32_t* p_dist = (uint32_t*)&dist;
-    uint32_t* p_dist_test = (uint32_t*)&dist_test;
+    uint32_t* p_dist = reinterpret_cast<uint32_t*>(&dist);
+    uint32_t* p_dist_test = reinterpret_cast<uint32_t*>(&dist_test);
     if (dist != dist_test) {
         TRACE_ERROR("ERROR %x\n", *p_dist ^ *p_dist_test);
     }
@@ -102,12 +102,11 @@ void latlon::hausdorff_distance(const shared_ptr<adj_user_paths> paths,
 float latlon::hausdorff(const adj_path& p0, const adj_path& p1) {
     uint32_t points0 = p0.get_points_number();
     uint32_t points1 = p1.get_points_number();
-	uint32_t data_size = (points0 * points1) * sizeof(float);
-
-	float* result_buffer = nullptr;
     float* results = new float[points0 * points1];
 
 	/* Allocate GPU buffer */
+	uint32_t data_size = (points0 * points1) * sizeof(float);
+	float* result_buffer = nullptr;
     cudaError_t cudaStatus = cudaMalloc((void**)&result_buffer, data_size);
     if (cudaStatus != cudaSuccess) 
 	{
