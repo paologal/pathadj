@@ -16,7 +16,7 @@
  */
 
 /*
- * ADJPathFile.h
+ * adj_path.h
  *
  *  Created on: May 18, 2013
  *      Author: Paolo Galbiati
@@ -25,6 +25,7 @@
 #ifndef ADJPATHFILE_H_
 #define ADJPATHFILE_H_
 
+#include "gpu_device.h"
 #include "platform_config.h"
 
 typedef struct path_point {
@@ -41,7 +42,7 @@ typedef struct path_file {
 
 class adj_path {
  public:
-    explicit adj_path(const string& file);
+    explicit adj_path(const shared_ptr<gpu_device> gpu, const string& file);
     virtual ~adj_path();
 
     bool load_file();
@@ -68,6 +69,7 @@ class adj_path {
     }
 
  private:
+    const shared_ptr<gpu_device> gpu;
     static const uint32_t PATH_FILE_CHECKSUM = 0x00ED00ED;
     uint8_t* path_data;
     path_point_t* device_data;

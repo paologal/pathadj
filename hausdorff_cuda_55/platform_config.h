@@ -37,9 +37,6 @@
 #include <vector>
 #include <string>
 
-#include <cuda_runtime.h>
-#include <device_launch_parameters.h>
-
 using std::vector;
 using std::string;
 using std::shared_ptr;

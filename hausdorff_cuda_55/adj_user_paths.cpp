@@ -26,8 +26,9 @@
 #include "platform_config.h"
 #include "adj_user_paths.h"
 
-adj_user_paths::adj_user_paths(const string& dir)
-        : user_dir(dir) {
+adj_user_paths::adj_user_paths(const shared_ptr<gpu_device> gpu, const string& dir)
+        : gpu(gpu),
+          user_dir(dir) {
 }
 
 void adj_user_paths::load_paths() {
@@ -82,7 +83,7 @@ void adj_user_paths::load_paths() {
 }
 
 void adj_user_paths::load_path(const string& filename) {
-    shared_ptr<adj_path> path(new adj_path(filename));
+    shared_ptr<adj_path> path(new adj_path(gpu, filename));
     if (true == path->load_file()) {
         file_array.push_back(path);
     }

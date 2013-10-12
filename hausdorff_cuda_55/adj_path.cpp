@@ -24,10 +24,11 @@
 
 #include "platform_config.h"
 #include "adj_path.h"
-#include "latlon.h"
+#include "hausdorff.h"
 
-adj_path::adj_path(const string& file)
-        : path_data(nullptr),
+adj_path::adj_path(const shared_ptr<gpu_device> gpu, const string& file)
+        : gpu(gpu),
+          path_data(nullptr),
           device_data(nullptr),
           file_name(file),
           cumulated_distance(0.0) {
@@ -49,7 +50,7 @@ void adj_path::reset() {
     }
 
     if (nullptr != device_data) {
-		cudaFree(device_data);
+		gpu->gpu_device_free(device_data);
         device_data = nullptr;
     }
 
@@ -153,18 +154,14 @@ bool adj_path::load_file() {
     }
 
     /* Allocate GPU buffer */
-    cudaError_t cudaStatus = cudaMalloc((void**)&device_data, path.points * (sizeof(path_point_t)));
-    if (cudaStatus != cudaSuccess) 
+    if (false == gpu->gpu_device_malloc((void**)&device_data, path.points * (sizeof(path_point_t)))) 
 	{
-        TRACE_ERROR("cudaMalloc failed!");
-		reset();
+ 		reset();
         return false;
     }
 	// Copy path from host memory to GPU buffer.
-    cudaStatus = cudaMemcpy(device_data, path.coordinates, path.points * (sizeof(path_point_t)), cudaMemcpyHostToDevice);
-    if (cudaStatus != cudaSuccess) 
+    if (false == gpu->gpu_memcpy(device_data, path.coordinates, path.points * (sizeof(path_point_t)), gpu_memcpy_host_to_device)) 
 	{
-        TRACE_ERROR("cudaMemcpy failed!");
         reset();
         return false;
     }
@@ -198,7 +195,7 @@ void adj_path::init() {
             sum_lat += p0->lat;
             sum_lon += p0->lon;
 #ifdef DEBUG_DUMP
-            cumulated_distance += latlon::haversine(p0, get_point(i + 1));
+            cumulated_distance += hausdorff::haversine(p0, get_point(i + 1));
 #endif
         }
     }

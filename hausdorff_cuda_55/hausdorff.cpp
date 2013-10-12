@@ -16,26 +16,29 @@
  */
 
 /*
- * latlon.cpp
+ * hausdorff.cpp
  *
  *  Created on: May 27, 2013
  *      Author: Paolo Galbiati
  */
 
+#include "gpu_device.h"
+
 #include "platform_config.h"
-#include "latlon.h"
+#include "hausdorff.h"
 
-const float latlon::EARTH_RADIUS = 6371.0f;
+const float hausdorff::ERROR_LIMIT = 0.01f;
+const float hausdorff::EARTH_RADIUS = 6371.0f;
 
-latlon::latlon() {
+hausdorff::hausdorff() {
     // TODO(paolo) Auto-generated constructor stub
 }
 
-latlon::~latlon() {
+hausdorff::~hausdorff() {
     // TODO(paolo) Auto-generated destructor stub
 }
 
-float latlon::haversine(const path_point_t* p0, const path_point_t* p1) {
+float hausdorff::haversine(const path_point_t* p0, const path_point_t* p1) {
     float delta_lat = (p1->lat - p0->lat) * 0.5f;
     float delta_lon = (p1->lon - p0->lon) * 0.5f;
     float tmp0 = sinf(delta_lat);
@@ -43,12 +46,12 @@ float latlon::haversine(const path_point_t* p0, const path_point_t* p1) {
 
     float a = tmp0 * tmp0 + cosf(p0->lat) * cosf(p1->lat) * tmp1 * tmp1;
     float c = 2 * atan2f(sqrtf(a), sqrtf(1 - a));
-    return latlon::EARTH_RADIUS * c;
+    return hausdorff::EARTH_RADIUS * c;
 }
 
-float latlon::hausdorff_test(const adj_path& p0, const adj_path& p1) {
-    float dist_01 = latlon::hausdorff_impl_test(p0, p1);
-    float dist_10 = latlon::hausdorff_impl_test(p1, p0);
+float hausdorff::distance_test(const adj_path& p0, const adj_path& p1) {
+    float dist_01 = hausdorff::distance_impl_test(p0, p1);
+    float dist_10 = hausdorff::distance_impl_test(p1, p0);
 
     if (dist_01 > dist_10) {
         return dist_01;
@@ -57,7 +60,7 @@ float latlon::hausdorff_test(const adj_path& p0, const adj_path& p1) {
     }
 }
 
-float latlon::hausdorff_impl_test(const adj_path& p0, const adj_path& p1) {
+float hausdorff::distance_impl_test(const adj_path& p0, const adj_path& p1) {
     uint32_t points0 = p0.get_points_number();
     uint32_t points1 = p1.get_points_number();
     float min_dist = numeric_limits<float>::max();
@@ -67,7 +70,7 @@ float latlon::hausdorff_impl_test(const adj_path& p0, const adj_path& p1) {
     for (uint32_t i = 0; i < points0; i++) {
         min_dist = numeric_limits<float>::max();
         for (uint32_t j = 0; j < points1; j++) {
-            curr_dist = latlon::haversine(p0.get_point(i), p1.get_point(j));
+            curr_dist = hausdorff::haversine(p0.get_point(i), p1.get_point(j));
             if (curr_dist < min_dist) {
                 min_dist = curr_dist;
             }
@@ -80,70 +83,77 @@ float latlon::hausdorff_impl_test(const adj_path& p0, const adj_path& p1) {
     return max_dist;
 }
 
-void latlon::hausdorff_distance(const shared_ptr<adj_user_paths> paths,
+void hausdorff::distance(const shared_ptr<gpu_device> gpu,
+                                const shared_ptr<adj_user_paths> paths,
                                 uint32_t j, uint32_t i) {
     const shared_ptr<adj_path> path0(paths->get_path(j));
     const shared_ptr<adj_path> path1(paths->get_path(i));
-    float dist = latlon::hausdorff(*path0, *path1);
+    float dist = hausdorff::distance_impl(gpu, *path0, *path1);
 #ifdef UNIT_TEST
-    float dist_test = latlon::hausdorff_test(*path0, *path1);
-    uint32_t* p_dist = reinterpret_cast<uint32_t*>(&dist);
-    uint32_t* p_dist_test = reinterpret_cast<uint32_t*>(&dist_test);
-    if (dist != dist_test) {
-        TRACE_ERROR("ERROR %x\n", *p_dist ^ *p_dist_test);
+    float dist_test = hausdorff::distance_test(*path0, *path1);
+    if (abs(dist - dist_test) > hausdorff::ERROR_LIMIT) {
+        TRACE_ERROR("ERROR %f\n", abs(dist - dist_test));
     }
-    assert((*p_dist ^ *p_dist_test) < 4);
+    assert(abs (dist - dist_test) <= hausdorff::ERROR_LIMIT);
 #endif /* UNIT_TEST */
     TRACE_INFO("%d,%d,%s,%s,Distance: %f km\n", j, i,
            path0->get_path_name().c_str(), path1->get_path_name().c_str(),
            dist);
 }
 
-float latlon::hausdorff(const adj_path& p0, const adj_path& p1) {
+float hausdorff::distance_impl(const shared_ptr<gpu_device> gpu,
+                        const adj_path& p0,
+                        const adj_path& p1) {
     uint32_t points0 = p0.get_points_number();
     uint32_t points1 = p1.get_points_number();
-    float* results = new float[points0 * points1];
+    shared_ptr<float> results(new float[points0 * points1]);
+    float* results_ptr = results.get();
+    float dist = 0.0f;
 
 	/* Allocate GPU buffer */
 	uint32_t data_size = (points0 * points1) * sizeof(float);
 	float* result_buffer = nullptr;
-    cudaError_t cudaStatus = cudaMalloc((void**)&result_buffer, data_size);
-    if (cudaStatus != cudaSuccess) 
+    
+    if (false == gpu->gpu_device_malloc((void**)&result_buffer, data_size)) 
 	{
-        TRACE_ERROR("cudaMalloc failed!");
-        return 0;
+       return dist;
     }
 
+#ifdef HAUSDORFF_CUDA
     hausdorffGPU(result_buffer, p0.get_device_data(), p1.get_device_data(), points0, points1);
+#else
+    for (uint32_t i = 0; i < points0; i++) {
+        for (uint32_t j = 0; j < points1; j++) {
+            results_ptr[i * points1 + j] = hausdorff::haversine(p0.get_point(i),
+                                                         p1.get_point(j));
+        }
+    }
+#endif
 
-    cudaDeviceSynchronize();
+    gpu->gpu_device_synchronize();
 
     // Copy result from device to host
-    cudaStatus = cudaMemcpy(results, result_buffer, data_size, cudaMemcpyDeviceToHost);
-    if (cudaStatus != cudaSuccess) 
+    if (true == gpu->gpu_memcpy(results.get(), result_buffer, data_size, gpu_memcpy_device_to_host)) 
 	{
-        TRACE_ERROR("cudaMemcpy returned error code %d, line(%d)\n", cudaStatus, __LINE__);
-        return 0;
+        dist = hausdorff::maxmin_impl(results, points0, points1);
     }
 
-    float dist = latlon::hausdorff_impl(results, points0, points1);
-
-    cudaFree(result_buffer);
-    delete[] results;
+    gpu->gpu_device_free(result_buffer);
 
     return dist;
 }
 
-float latlon::hausdorff_impl(const float* results, uint32_t row, uint32_t col) {
+float hausdorff::maxmin_impl(shared_ptr<float> results, uint32_t row, uint32_t col) {
     float dist_01;
     float min_dist = numeric_limits<float>::max();;
     float max_dist = 0.0;
     float curr_dist = 0.0;
+    float* results_ptr = results.get();
 
     for (uint32_t i = 0; i < row; i++) {
         min_dist = numeric_limits<float>::max();;
         for (uint32_t j = 0; j < col; j++) {
-            curr_dist = results[i * col + j];
+            curr_dist = results_ptr[i * col + j];
             if (curr_dist < min_dist) {
                 min_dist = curr_dist;
             }
@@ -159,7 +169,7 @@ float latlon::hausdorff_impl(const float* results, uint32_t row, uint32_t col) {
     for (uint32_t i = 0; i < col; i++) {
         min_dist = numeric_limits<float>::max();;
         for (uint32_t j = 0; j < row; j++) {
-            curr_dist = results[i + j * col];
+            curr_dist = results_ptr[i + j * col];
             if (curr_dist < min_dist) {
                 min_dist = curr_dist;
             }

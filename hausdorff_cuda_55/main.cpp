@@ -15,22 +15,31 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 /*
- * main.cc
+ * main.cpp
  *
  *  Created on: May 19, 2013
  *      Author: Paolo Galbiati
  */
 
+#ifdef HAUSDORFF_CUDA
+#include "gpu_cuda_device.h"
+#else
+#include "gpu_none_device.h"
+#endif
+
 #include "adj_path.h"
 #include "adj_user_paths.h"
-#include "latlon.h"
+#include "hausdorff.h"
 
-void compute_subset(const shared_ptr<adj_user_paths> paths, uint32_t size,
-                    uint32_t start, uint32_t step) {
-	cudaError_t error_id = cudaSetDevice(0);
-	if (error_id != cudaSuccess)
+void compute_subset(const shared_ptr<gpu_device> gpu,
+                    const shared_ptr<adj_user_paths> paths,
+                    uint32_t size,
+                    uint32_t start,
+                    uint32_t step) {
+
+    if (false == gpu->gpu_set_device(0))
 	{
-		TRACE_ERROR("cudaSetDevice failed!  Do you have a CUDA-capable GPU installed?");
+		TRACE_ERROR("GPU set device failed!");
 		return;
 	}
 
@@ -40,7 +49,7 @@ void compute_subset(const shared_ptr<adj_user_paths> paths, uint32_t size,
                     j,
                     size - (j + 1));
         for (uint32_t i = j + 1; i < size; ++i) {
-            latlon::hausdorff_distance(paths, j, i);
+            hausdorff::distance(gpu, paths, j, i);
         }
         if (j != size - j - 2) {
             TRACE_DEBUG("%d, Computing column %d, %d elements\n",
@@ -48,7 +57,7 @@ void compute_subset(const shared_ptr<adj_user_paths> paths, uint32_t size,
                         size - j - 2,
                         size - (size - j - 1));
             for (uint32_t i = size - j - 1; i < size; ++i) {
-                latlon::hausdorff_distance(paths, size - j - 2, i);
+                hausdorff::distance(gpu, paths, size - j - 2, i);
             }
         }
     }
@@ -61,24 +70,23 @@ int main(int argc, char** argv)
         return 0;
     }
 
-	int32_t deviceCount;
-	cudaError_t error_id = cudaGetDeviceCount(&deviceCount);
-	if (error_id != cudaSuccess)
-	{
-		TRACE_ERROR("cudaGetDeviceCount returned %d\n-> %s\n", (int)error_id, cudaGetErrorString(error_id));
-		return EXIT_FAILURE;
-	}
+#ifdef HAUSDORFF_CUDA
+    const shared_ptr<gpu_cuda_device> gpu(new gpu_cuda_device);
+#else
+    const shared_ptr<gpu_none_device> gpu(new gpu_none_device);
+#endif
 
-	if (deviceCount == 0)
+	int32_t device_count;
+    gpu->gpu_get_device_count(&device_count);
+	if (device_count == 0)
 	{
-		TRACE_ERROR("!!!!!No CUDA devices found!!!!!\n");
 		return EXIT_FAILURE;
 	}
 
     vector<thread> threads;
     uint32_t max_threads = 16 * thread::hardware_concurrency();
     for (int32_t i = 1; i < argc; ++i) {
-        const shared_ptr<adj_user_paths> paths0(new adj_user_paths(argv[i]));
+        const shared_ptr<adj_user_paths> paths0(new adj_user_paths(gpu, argv[i]));
         paths0->load_paths();
         uint32_t size0 = paths0->get_paths_number();
 
@@ -90,8 +98,12 @@ int main(int argc, char** argv)
         if (size0 > 1) {
             for (uint32_t j = 0; j < num_of_threads; ++j) {
                 threads.push_back(
-                        thread(compute_subset, paths0, size0, j,
-                               num_of_threads));
+                        thread(compute_subset, 
+                        gpu, 
+                        paths0, 
+                        size0, 
+                        j,
+                        num_of_threads));
             }
             for (auto& thread : threads) {
                 thread.join();
@@ -101,14 +113,7 @@ int main(int argc, char** argv)
         paths0->reset();
     }
 
-	// cudaDeviceReset must be called before exiting in order for profiling and
-    // tracing tools such as Nsight and Visual Profiler to show complete traces.
-    error_id = cudaDeviceReset();
-    if (error_id != cudaSuccess) 
-	{
-        TRACE_ERROR("cudaDeviceReset failed!");
-        return EXIT_FAILURE;
-    }
+	gpu->gpu_device_reset();
 
 	return EXIT_SUCCESS;
 }

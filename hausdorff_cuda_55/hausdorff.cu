@@ -16,7 +16,7 @@
 */
 
 /*
-* latlon.cu
+* hausdorff.cu
 *
 *  Created on: Sep 22, 2013
 *      Author: Paolo Galbiati

@@ -25,11 +25,12 @@
 #ifndef ADJ_USER_PATHS_H_
 #define ADJ_USER_PATHS_H_
 
+#include "gpu_device.h"
 #include "adj_path.h"
 
 class adj_user_paths {
  public:
-    explicit adj_user_paths(const string& dir);
+    explicit adj_user_paths(const shared_ptr<gpu_device> gpu, const string& dir);
     virtual ~adj_user_paths();
 
     void load_path(const string& filename);
@@ -49,6 +50,7 @@ class adj_user_paths {
     }
 
  private:
+    const shared_ptr<gpu_device> gpu;
     string user_dir;
     vector<shared_ptr<adj_path>> file_array;
 };
