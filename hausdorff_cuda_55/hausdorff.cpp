@@ -50,8 +50,8 @@ float hausdorff::haversine(const path_point_t* p0, const path_point_t* p1) {
 }
 
 float hausdorff::distance_test(const adj_path& p0, const adj_path& p1) {
-    float dist_01 = hausdorff::distance_impl_test(p0, p1);
-    float dist_10 = hausdorff::distance_impl_test(p1, p0);
+    float dist_01 = distance_impl_test(p0, p1);
+    float dist_10 = distance_impl_test(p1, p0);
 
     if (dist_01 > dist_10) {
         return dist_01;
@@ -70,7 +70,7 @@ float hausdorff::distance_impl_test(const adj_path& p0, const adj_path& p1) {
     for (uint32_t i = 0; i < points0; i++) {
         min_dist = numeric_limits<float>::max();
         for (uint32_t j = 0; j < points1; j++) {
-            curr_dist = hausdorff::haversine(p0.get_point(i), p1.get_point(j));
+            curr_dist = haversine(p0.get_point(i), p1.get_point(j));
             if (curr_dist < min_dist) {
                 min_dist = curr_dist;
             }
@@ -88,9 +88,9 @@ void hausdorff::distance(const shared_ptr<gpu_device> gpu,
                                 uint32_t j, uint32_t i) {
     const shared_ptr<adj_path> path0(paths->get_path(j));
     const shared_ptr<adj_path> path1(paths->get_path(i));
-    float dist = hausdorff::distance_impl(gpu, *path0, *path1);
+    float dist = distance_impl(gpu, *path0, *path1);
 #ifdef UNIT_TEST
-    float dist_test = hausdorff::distance_test(*path0, *path1);
+    float dist_test = distance_test(*path0, *path1);
     if (abs(dist - dist_test) > hausdorff::ERROR_LIMIT) {
         TRACE_ERROR("ERROR %f\n", abs(dist - dist_test));
     }
@@ -99,48 +99,6 @@ void hausdorff::distance(const shared_ptr<gpu_device> gpu,
     TRACE_INFO("%d,%d,%s,%s,Distance: %f km\n", j, i,
            path0->get_path_name().c_str(), path1->get_path_name().c_str(),
            dist);
-}
-
-float hausdorff::distance_impl(const shared_ptr<gpu_device> gpu,
-                        const adj_path& p0,
-                        const adj_path& p1) {
-    uint32_t points0 = p0.get_points_number();
-    uint32_t points1 = p1.get_points_number();
-    shared_ptr<float> results(new float[points0 * points1]);
-    float* results_ptr = results.get();
-    float dist = 0.0f;
-
-	/* Allocate GPU buffer */
-	uint32_t data_size = (points0 * points1) * sizeof(float);
-	float* result_buffer = nullptr;
-    
-    if (false == gpu->gpu_device_malloc((void**)&result_buffer, data_size)) 
-	{
-       return dist;
-    }
-
-#ifdef HAUSDORFF_CUDA
-    hausdorffGPU(result_buffer, p0.get_device_data(), p1.get_device_data(), points0, points1);
-#else
-    for (uint32_t i = 0; i < points0; i++) {
-        for (uint32_t j = 0; j < points1; j++) {
-            results_ptr[i * points1 + j] = hausdorff::haversine(p0.get_point(i),
-                                                         p1.get_point(j));
-        }
-    }
-#endif
-
-    gpu->gpu_device_synchronize();
-
-    // Copy result from device to host
-    if (true == gpu->gpu_memcpy(results.get(), result_buffer, data_size, gpu_memcpy_device_to_host)) 
-	{
-        dist = hausdorff::maxmin_impl(results, points0, points1);
-    }
-
-    gpu->gpu_device_free(result_buffer);
-
-    return dist;
 }
 
 float hausdorff::maxmin_impl(shared_ptr<float> results, uint32_t row, uint32_t col) {
@@ -184,4 +142,26 @@ float hausdorff::maxmin_impl(shared_ptr<float> results, uint32_t row, uint32_t c
     } else {
         return max_dist;
     }
+}
+
+
+float hausdorff_cpu::distance_impl(const shared_ptr<gpu_device> gpu,
+                        const adj_path& p0,
+                        const adj_path& p1) {
+    uint32_t points0 = p0.get_points_number();
+    uint32_t points1 = p1.get_points_number();
+    shared_ptr<float> results(new float[points0 * points1]);
+    float* results_ptr = results.get();
+    float dist = 0.0f;
+
+    for (uint32_t i = 0; i < points0; i++) {
+        for (uint32_t j = 0; j < points1; j++) {
+            results_ptr[i * points1 + j] = hausdorff::haversine(p0.get_point(i),
+                                                         p1.get_point(j));
+        }
+    }
+
+    dist = maxmin_impl(results, points0, points1);
+
+    return dist;
 }

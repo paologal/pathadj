@@ -21,11 +21,7 @@
  *      Author: Paolo Galbiati
  */
 
-#ifdef HAUSDORFF_CUDA
 #include "gpu_cuda_device.h"
-#else
-#include "gpu_none_device.h"
-#endif
 
 #include "adj_path.h"
 #include "adj_user_paths.h"
@@ -37,6 +33,12 @@ void compute_subset(const shared_ptr<gpu_device> gpu,
                     uint32_t start,
                     uint32_t step) {
 
+#ifdef HAUSDORFF_CUDA
+    const shared_ptr<hausdorff_gpu> algo(new hausdorff_gpu);
+#else
+    const shared_ptr<hausdorff_cpu> algo(new hausdorff_cpu);
+#endif
+    
     if (false == gpu->gpu_set_device(0))
 	{
 		TRACE_ERROR("GPU set device failed!");
@@ -49,7 +51,7 @@ void compute_subset(const shared_ptr<gpu_device> gpu,
                     j,
                     size - (j + 1));
         for (uint32_t i = j + 1; i < size; ++i) {
-            hausdorff::distance(gpu, paths, j, i);
+            algo->distance(gpu, paths, j, i);
         }
         if (j != size - j - 2) {
             TRACE_DEBUG("%d, Computing column %d, %d elements\n",
@@ -57,7 +59,7 @@ void compute_subset(const shared_ptr<gpu_device> gpu,
                         size - j - 2,
                         size - (size - j - 1));
             for (uint32_t i = size - j - 1; i < size; ++i) {
-                hausdorff::distance(gpu, paths, size - j - 2, i);
+                algo->distance(gpu, paths, size - j - 2, i);
             }
         }
     }
@@ -71,9 +73,9 @@ int main(int argc, char** argv)
     }
 
 #ifdef HAUSDORFF_CUDA
-    const shared_ptr<gpu_cuda_device> gpu(new gpu_cuda_device);
+    const shared_ptr<gpu_device> gpu(new gpu_cuda_device);
 #else
-    const shared_ptr<gpu_none_device> gpu(new gpu_none_device);
+    const shared_ptr<gpu_device> gpu(new gpu_device);
 #endif
 
 	int32_t device_count;
@@ -84,7 +86,7 @@ int main(int argc, char** argv)
 	}
 
     vector<thread> threads;
-    uint32_t max_threads = 16 * thread::hardware_concurrency();
+    uint32_t max_threads = 4 * thread::hardware_concurrency();
     for (int32_t i = 1; i < argc; ++i) {
         const shared_ptr<adj_user_paths> paths0(new adj_user_paths(gpu, argv[i]));
         paths0->load_paths();
@@ -99,7 +101,7 @@ int main(int argc, char** argv)
             for (uint32_t j = 0; j < num_of_threads; ++j) {
                 threads.push_back(
                         thread(compute_subset, 
-                        gpu, 
+                        gpu,
                         paths0, 
                         size0, 
                         j,

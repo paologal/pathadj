@@ -30,30 +30,49 @@
 
 class gpu_device;
 
-void hausdorffGPU(float* res, path_point_t* p0, path_point_t* p1, uint32_t points0, uint32_t points1);
+void hausdorffGPU(float* res, const path_point_t* p0, const path_point_t* p1, uint32_t points0, uint32_t points1);
 
 class hausdorff {
  public:
     hausdorff();
     virtual ~hausdorff();
 
-    static float haversine(const path_point_t* p0, const path_point_t* p1);
-    static void distance(const shared_ptr<gpu_device> gpu,
+    void distance(const shared_ptr<gpu_device> gpu,
         const shared_ptr<adj_user_paths> paths,
         uint32_t j, 
         uint32_t i);
- private:
-    static float distance_impl(const shared_ptr<gpu_device> gpu,
+ 
+protected:
+    float haversine(const path_point_t* p0, const path_point_t* p1);
+    float maxmin_impl(shared_ptr<float> results, 
+        uint32_t row,
+        uint32_t col);
+    virtual float distance_impl(const shared_ptr<gpu_device> gpu,
         const adj_path& p0,
+        const adj_path& p1) = 0;
+
+private:
+    float distance_test(const adj_path& p0,
         const adj_path& p1);
-    static float maxmin_impl(shared_ptr<float> results, uint32_t row,
-                                uint32_t col);
-    static float distance_test(const adj_path& p0, const adj_path& p1);
-    static float distance_impl_test(const adj_path& p0, const adj_path& p1);
+    float distance_impl_test(const adj_path& p0,
+        const adj_path& p1);
 
     static const float ERROR_LIMIT;
     static const float EARTH_RADIUS;
 };
 
+class hausdorff_gpu : public hausdorff {
+ protected:
+    float distance_impl(const shared_ptr<gpu_device> gpu,
+        const adj_path& p0,
+        const adj_path& p1);
+};
+
+class hausdorff_cpu : public hausdorff {
+ protected:
+    float distance_impl(const shared_ptr<gpu_device> gpu,
+        const adj_path& p0,
+        const adj_path& p1);
+};
 
 #endif /* HAUSDORFF_H_ */

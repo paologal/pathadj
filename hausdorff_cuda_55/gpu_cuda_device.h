@@ -24,10 +24,12 @@
 #ifndef GPU_CUDA_DEVICE_H_
 #define GPU_CUDA_DEVICE_H_
 
+#include "gpu_device.h"
+
+#ifdef HAUSDORFF_CUDA
 #include <cuda_runtime.h>
 #include <device_launch_parameters.h>
-
-#include "gpu_device.h"
+#endif /* HAUSDORFF_CUDA */
 
 class gpu_cuda_device : public gpu_device
 {
@@ -35,13 +37,13 @@ public:
     gpu_cuda_device(void) {};
     virtual ~gpu_cuda_device(void) {};
 
-    virtual bool gpu_set_device(int32_t device);
-    virtual void gpu_get_device_count(int32_t* device_count);
-    virtual void gpu_device_synchronize();
-    virtual void gpu_device_reset();
-    virtual bool gpu_device_free(void* device_data);
-    virtual bool gpu_device_malloc(void** device_data, size_t size);
-    virtual bool gpu_memcpy(void* dst, const void* src, size_t count, gpu_memcpy_kind_t kind);
+    bool gpu_set_device(int32_t device);
+    void gpu_get_device_count(int32_t* device_count);
+    void gpu_device_synchronize();
+    void gpu_device_reset();
+    bool gpu_device_free(void* device_data);
+    bool gpu_device_malloc(void** device_data, size_t size);
+    bool gpu_memcpy(void* dst, const void* src, size_t count, gpu_memcpy_kind_t kind);
 };
 
 #endif /* GPU_CUDA_DEVICE_H_ */

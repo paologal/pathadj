@@ -24,9 +24,10 @@
 
 #include "platform_config.h"
 #include "adj_path.h"
+#include "hausdorff.h"
 
 template <int BLOCK_SIZE> __global__ void
-    hausdorffCUDA(float* res, path_point_t* p0, path_point_t* p1, uint32_t points0, uint32_t points1)
+    hausdorffCUDA(float* res, const path_point_t* p0, const path_point_t* p1, uint32_t points0, uint32_t points1)
 {
     const float EARTH_RADIUS = 6371.0f;
 
@@ -54,7 +55,7 @@ template <int BLOCK_SIZE> __global__ void
     }
 }
 
-void hausdorffGPU(float* res, path_point_t* p0, path_point_t* p1, uint32_t points0, uint32_t points1) {
+void hausdorffGPU(float* res, const path_point_t* p0, const path_point_t* p1, uint32_t points0, uint32_t points1) {
 
     const uint32_t BLOCK_SIZE = 32;
 
@@ -73,4 +74,37 @@ void hausdorffGPU(float* res, path_point_t* p0, path_point_t* p1, uint32_t point
 
 
     hausdorffCUDA<BLOCK_SIZE><<< grid, threads >>>(res, p0, p1, points0, points1);
+}
+
+float hausdorff_gpu::distance_impl(const shared_ptr<gpu_device> gpu,
+                        const adj_path& p0,
+                        const adj_path& p1) {
+    uint32_t points0 = p0.get_points_number();
+    uint32_t points1 = p1.get_points_number();
+    shared_ptr<float> results(new float[points0 * points1]);
+    float* results_ptr = results.get();
+    float dist = 0.0f;
+
+	/* Allocate GPU buffer */
+	uint32_t data_size = (points0 * points1) * sizeof(float);
+	float* result_buffer = nullptr;
+    
+    if (false == gpu->gpu_device_malloc((void**)&result_buffer, data_size)) 
+	{
+       return dist;
+    }
+
+    hausdorffGPU(result_buffer, p0.get_device_data(), p1.get_device_data(), points0, points1);
+
+    gpu->gpu_device_synchronize();
+
+    // Copy result from device to host
+    if (true == gpu->gpu_memcpy(results.get(), result_buffer, data_size, gpu_memcpy_device_to_host)) 
+	{
+        dist = maxmin_impl(results, points0, points1);
+    }
+
+    gpu->gpu_device_free(result_buffer);
+
+    return dist;
 }
