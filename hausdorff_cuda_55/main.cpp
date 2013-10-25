@@ -22,53 +22,9 @@
  */
 
 #include "gpu_cuda_device.h"
-
+#include "distance_thread.h"
 #include "adj_path.h"
 #include "adj_user_paths.h"
-#include "hausdorff.h"
-
-void compute_subset(const shared_ptr<gpu_device> gpu,
-                    const shared_ptr<adj_user_paths> paths,
-                    uint32_t size,
-                    uint32_t start,
-                    uint32_t step) {
-
-#ifdef HAUSDORFF_CUDA
-    const shared_ptr<hausdorff_gpu> algo(new hausdorff_gpu);
-#else
-    const shared_ptr<hausdorff_cpu> algo(new hausdorff_cpu);
-#endif
-    uint32_t count = 0;
-    
-    if (false == gpu->gpu_set_device(0))
-	{
-		TRACE_ERROR("GPU set device failed!");
-		return;
-	}
-
-    for (uint32_t j = start; j < size / 2; j += step) {
-        TRACE_DEBUG("%d, Computing column %d, %d elements\n",
-                    start,
-                    j,
-                    size - (j + 1));
-        for (uint32_t i = j + 1; i < size; ++i) {
-            algo->distance(gpu, paths, j, i);
-            ++count;
-        }
-        if (j != size - j - 2) {
-            TRACE_DEBUG("%d, Computing column %d, %d elements\n",
-                        start,
-                        size - j - 2,
-                        size - (size - j - 1));
-            for (uint32_t i = size - j - 1; i < size; ++i) {
-                algo->distance(gpu, paths, size - j - 2, i);
-                ++count;
-            }
-        }
-    }
-
-    TRACE_DEBUG("%d, Computed %d elements\n", start, count);
-}
 
 int main(int argc, char** argv)
 {
@@ -91,7 +47,7 @@ int main(int argc, char** argv)
 	}
 
     vector<thread> threads;
-    uint32_t max_threads = 16 * thread::hardware_concurrency();
+    uint32_t max_threads = 8 * thread::hardware_concurrency();
     for (int32_t i = 1; i < argc; ++i) {
         const shared_ptr<adj_user_paths> paths0(new adj_user_paths(gpu, argv[i]));
         paths0->load_paths();
@@ -105,12 +61,12 @@ int main(int argc, char** argv)
         if (size0 > 1) {
             for (uint32_t j = 0; j < num_of_threads; ++j) {
                 threads.push_back(
-                        thread(compute_subset, 
-                        gpu,
-                        paths0, 
-                        size0, 
-                        j,
-                        num_of_threads));
+                    thread(distance_thread::compute_subset,
+                    gpu,
+                    paths0, 
+                    size0,
+                    j,
+                    num_of_threads));
             }
             for (auto& thread : threads) {
                 thread.join();
