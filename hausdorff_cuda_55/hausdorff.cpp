@@ -63,12 +63,12 @@ float hausdorff::distance_test(const adj_path& p0, const adj_path& p1) {
 float hausdorff::distance_impl_test(const adj_path& p0, const adj_path& p1) {
     uint32_t points0 = p0.get_points_number();
     uint32_t points1 = p1.get_points_number();
-    float min_dist = numeric_limits<float>::max();
+    float min_dist = FLT_MAX;
     float max_dist = 0.0;
     float curr_dist = 0.0;
 
     for (uint32_t i = 0; i < points0; i++) {
-        min_dist = numeric_limits<float>::max();
+        min_dist = FLT_MAX;
         for (uint32_t j = 0; j < points1; j++) {
             curr_dist = haversine(p0.get_point(i), p1.get_point(j));
             if (curr_dist < min_dist) {
@@ -96,20 +96,20 @@ void hausdorff::distance(const shared_ptr<gpu_device> gpu,
     }
     assert(abs (dist - dist_test) <= hausdorff::ERROR_LIMIT);
 #endif /* UNIT_TEST */
-    TRACE_INFO("%d,%d,%s,%s,Distance: %f km\n", j, i,
+    TRACE_DEBUG("%d,%d,%s,%s,Distance: %f km\n", j, i,
            path0->get_path_name().c_str(), path1->get_path_name().c_str(),
            dist);
 }
 
 float hausdorff::maxmin_impl(shared_ptr<float> results, uint32_t row, uint32_t col) {
     float dist_01;
-    float min_dist = numeric_limits<float>::max();;
+    float min_dist = FLT_MAX;
     float max_dist = 0.0;
     float curr_dist = 0.0;
     float* results_ptr = results.get();
 
     for (uint32_t i = 0; i < row; i++) {
-        min_dist = numeric_limits<float>::max();;
+        min_dist = FLT_MAX;
         for (uint32_t j = 0; j < col; j++) {
             curr_dist = results_ptr[i * col + j];
             if (curr_dist < min_dist) {
@@ -125,7 +125,7 @@ float hausdorff::maxmin_impl(shared_ptr<float> results, uint32_t row, uint32_t c
     max_dist = 0.0;
 
     for (uint32_t i = 0; i < col; i++) {
-        min_dist = numeric_limits<float>::max();;
+        min_dist = FLT_MAX;
         for (uint32_t j = 0; j < row; j++) {
             curr_dist = results_ptr[i + j * col];
             if (curr_dist < min_dist) {

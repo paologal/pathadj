@@ -26,7 +26,7 @@
 #include "adj_path.h"
 #include "hausdorff.h"
 
-template <int BLOCK_SIZE> __global__ void
+template <uint32_t BLOCK_SIZE, uint32_t ITERATIONS_PER_THREAD> __global__ void
     hausdorffCUDA(float* res, const path_point_t* p0, const path_point_t* p1, uint32_t points0, uint32_t points1)
 {
     const float EARTH_RADIUS = 6371.0f;
@@ -40,24 +40,28 @@ template <int BLOCK_SIZE> __global__ void
     uint32_t ty = threadIdx.y;
 
     uint32_t  x = bx * BLOCK_SIZE + tx;
-    uint32_t  y = by * BLOCK_SIZE + ty;
+    uint32_t  y = ITERATIONS_PER_THREAD * (by * BLOCK_SIZE + ty);
 
-    if ((x < points0) && (y < points1)) {
-        float delta_lat = (p1[y].lat - p0[x].lat) * 0.5f;
-        float delta_lon = (p1[y].lon - p0[x].lon) * 0.5f;
-        float tmp0 = __sinf(delta_lat);
-        float tmp1 = __sinf(delta_lon);
+#pragma unroll
+    for (uint32_t i = y; i < y + ITERATIONS_PER_THREAD; i++) {
+        if ((x < points0) && (i < points1)) {
+            float delta_lat = (p1[i].lat - p0[x].lat) * 0.5f;
+            float delta_lon = (p1[i].lon - p0[x].lon) * 0.5f;
+            float tmp0 = __sinf(delta_lat);
+            float tmp1 = __sinf(delta_lon);
 
-        float a = tmp0 * tmp0 + __cosf(p0[x].lat) * __cosf(p1[y].lat) * tmp1 * tmp1;
-        float c = 2 * atan2f(sqrtf(a), sqrtf(1 - a));
+            float a = tmp0 * tmp0 + __cosf(p0[x].lat) * __cosf(p1[i].lat) * tmp1 * tmp1;
+            float c = 2 * atan2f(sqrtf(a), sqrtf(1 - a));
  
-        *(res + x * points1 + y) = EARTH_RADIUS * c;
+            *(res + x * points1 + i) = EARTH_RADIUS * c;
+        }
     }
 }
 
 void hausdorffGPU(float* res, const path_point_t* p0, const path_point_t* p1, uint32_t points0, uint32_t points1) {
 
     const uint32_t BLOCK_SIZE = 32;
+    const uint32_t ITERATIONS_PER_THREAD = 8;
 
     // Setup execution parameters
     dim3 threads(BLOCK_SIZE, BLOCK_SIZE);
@@ -70,11 +74,20 @@ void hausdorffGPU(float* res, const path_point_t* p0, const path_point_t* p1, ui
         dim_y += 1;
     }
 
+    if (dim_y % ITERATIONS_PER_THREAD == 0) {
+        dim_y = dim_y / ITERATIONS_PER_THREAD;
+    }
+    else {
+        dim_y = dim_y / ITERATIONS_PER_THREAD + 1;
+    }
+
     dim3 grid(dim_x, dim_y);
 
 
-    hausdorffCUDA<BLOCK_SIZE><<< grid, threads >>>(res, p0, p1, points0, points1);
+    hausdorffCUDA<BLOCK_SIZE, ITERATIONS_PER_THREAD><<< grid, threads >>>(res, p0, p1, points0, points1);
 }
+
+
 
 float hausdorff_gpu::distance_impl(const shared_ptr<gpu_device> gpu,
                         const adj_path& p0,
@@ -90,7 +103,7 @@ float hausdorff_gpu::distance_impl(const shared_ptr<gpu_device> gpu,
 	float* result_buffer = nullptr;
     
     if (false == gpu->gpu_device_malloc((void**)&result_buffer, data_size)) 
-	{
+    {
        return dist;
     }
 

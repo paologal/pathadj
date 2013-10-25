@@ -38,6 +38,7 @@ void compute_subset(const shared_ptr<gpu_device> gpu,
 #else
     const shared_ptr<hausdorff_cpu> algo(new hausdorff_cpu);
 #endif
+    uint32_t count = 0;
     
     if (false == gpu->gpu_set_device(0))
 	{
@@ -52,6 +53,7 @@ void compute_subset(const shared_ptr<gpu_device> gpu,
                     size - (j + 1));
         for (uint32_t i = j + 1; i < size; ++i) {
             algo->distance(gpu, paths, j, i);
+            ++count;
         }
         if (j != size - j - 2) {
             TRACE_DEBUG("%d, Computing column %d, %d elements\n",
@@ -60,9 +62,12 @@ void compute_subset(const shared_ptr<gpu_device> gpu,
                         size - (size - j - 1));
             for (uint32_t i = size - j - 1; i < size; ++i) {
                 algo->distance(gpu, paths, size - j - 2, i);
+                ++count;
             }
         }
     }
+
+    TRACE_DEBUG("%d, Computed %d elements\n", start, count);
 }
 
 int main(int argc, char** argv)
@@ -86,7 +91,7 @@ int main(int argc, char** argv)
 	}
 
     vector<thread> threads;
-    uint32_t max_threads = 4 * thread::hardware_concurrency();
+    uint32_t max_threads = 16 * thread::hardware_concurrency();
     for (int32_t i = 1; i < argc; ++i) {
         const shared_ptr<adj_user_paths> paths0(new adj_user_paths(gpu, argv[i]));
         paths0->load_paths();
