@@ -22,9 +22,9 @@
  *      Author: Paolo Galbiati
  */
 
-#include "gpu_device.h"
-
 #include "platform_config.h"
+
+#include "gpu_device.h"
 #include "hausdorff.h"
 
 const float hausdorff::ERROR_LIMIT = 0.01f;

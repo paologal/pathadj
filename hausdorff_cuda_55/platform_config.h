@@ -30,6 +30,7 @@
 #include <cstdio>
 #include <cassert>
 #include <cmath>
+#include <cfloat>
 
 #include <limits>
 #include <memory>
