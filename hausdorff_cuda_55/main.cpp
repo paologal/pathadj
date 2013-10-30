@@ -26,8 +26,7 @@
 #include "adj_path.h"
 #include "adj_user_paths.h"
 
-int main(int argc, char** argv)
-{
+int main(int argc, char** argv) {
     if (argc < 2) {
         TRACE_ERROR("Usage: %s directories\n", argv[0]);
         return 0;
@@ -39,17 +38,17 @@ int main(int argc, char** argv)
     const shared_ptr<gpu_device> gpu(new gpu_device);
 #endif
 
-	int32_t device_count;
+    int32_t device_count;
     gpu->gpu_get_device_count(&device_count);
-	if (device_count == 0)
-	{
-		return EXIT_FAILURE;
-	}
+    if (device_count == 0) {
+        return EXIT_FAILURE;
+    }
 
     vector<thread> threads;
     uint32_t max_threads = 8 * thread::hardware_concurrency();
     for (int32_t i = 1; i < argc; ++i) {
-        const shared_ptr<adj_user_paths> paths0(new adj_user_paths(gpu, argv[i]));
+        const shared_ptr<adj_user_paths> paths0(
+                new adj_user_paths(gpu, argv[i]));
         paths0->load_paths();
         uint32_t size0 = paths0->get_paths_number();
 
@@ -61,12 +60,8 @@ int main(int argc, char** argv)
         if (size0 > 1) {
             for (uint32_t j = 0; j < num_of_threads; ++j) {
                 threads.push_back(
-                    thread(distance_thread::compute_subset,
-                    gpu,
-                    paths0, 
-                    size0,
-                    j,
-                    num_of_threads));
+                        thread(distance_thread::compute_subset, gpu, paths0,
+                               size0, j, num_of_threads));
             }
             for (auto& thread : threads) {
                 thread.join();
@@ -76,9 +71,8 @@ int main(int argc, char** argv)
         paths0->reset();
     }
 
-	gpu->gpu_device_reset();
+    gpu->gpu_device_reset();
 
-	return EXIT_SUCCESS;
+    return EXIT_SUCCESS;
 }
-
 

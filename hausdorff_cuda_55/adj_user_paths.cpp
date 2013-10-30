@@ -22,11 +22,11 @@
  *      Author: Paolo Galbiati
  */
 
-
 #include "platform_config.h"
 #include "adj_user_paths.h"
 
-adj_user_paths::adj_user_paths(const shared_ptr<gpu_device> gpu, const string& dir)
+adj_user_paths::adj_user_paths(const shared_ptr<gpu_device> gpu,
+                               const string& dir)
         : gpu(gpu),
           user_dir(dir) {
 }

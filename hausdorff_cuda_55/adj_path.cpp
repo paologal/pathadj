@@ -50,7 +50,7 @@ void adj_path::reset() {
     }
 
     if (nullptr != device_data) {
-		gpu->gpu_device_free(device_data);
+        gpu->gpu_device_free(device_data);
         device_data = nullptr;
     }
 
@@ -154,20 +154,23 @@ bool adj_path::load_file() {
     }
 
     /* Allocate GPU buffer */
-    if (false == gpu->gpu_device_malloc((void**)&device_data, path.points * (sizeof(path_point_t)))) 
-	{
- 		reset();
+    if (false
+            == gpu->gpu_device_malloc((void**) &device_data,
+                                      path.points * (sizeof(path_point_t)))) {
+        reset();
         return false;
     }
-	// Copy path from host memory to GPU buffer.
-    if (false == gpu->gpu_memcpy(device_data, path.coordinates, path.points * (sizeof(path_point_t)), gpu_memcpy_host_to_device)) 
-	{
+    // Copy path from host memory to GPU buffer.
+    if (false
+            == gpu->gpu_memcpy(device_data, path.coordinates,
+                               path.points * (sizeof(path_point_t)),
+                               gpu_memcpy_host_to_device)) {
         reset();
         return false;
     }
 
-	dump();
-	init();
+    dump();
+    init();
 
     return true;
 }
@@ -177,7 +180,7 @@ void adj_path::dump() {
     TRACE_DEBUG("Filename: %s\n", file_name.c_str());
     for (uint32_t i = 0; i < path.points; ++i) {
         TRACE_DEBUG("Point %d. Latitude %f, Longitude %f\n", i,
-                path.coordinates[i].lat, path.coordinates[i].lon);
+                    path.coordinates[i].lat, path.coordinates[i].lon);
     }
 #endif /* DEBUG_DUMP */
 }
@@ -195,7 +198,12 @@ void adj_path::init() {
             sum_lat += p0->lat;
             sum_lon += p0->lon;
 #ifdef DEBUG_DUMP
-            cumulated_distance += hausdorff::haversine(p0, get_point(i + 1));
+#ifdef HAUSDORFF_CUDA
+            const shared_ptr<hausdorff_gpu> algo(new hausdorff_gpu);
+#else
+            const shared_ptr<hausdorff_cpu> algo(new hausdorff_cpu);
+#endif
+            cumulated_distance += algo->haversine(p0, get_point(i + 1));
 #endif
         }
     }
@@ -215,13 +223,9 @@ void adj_path::init() {
     mean_point.lon = sum_lon / path.points;
 
     TRACE_DEBUG("Filename: %s\n", file_name.c_str());
-    TRACE_DEBUG("Points %d. Total distance %f.\n",
-                path.points,
+    TRACE_DEBUG("Points %d. Total distance %f.\n", path.points,
                 cumulated_distance);
-    TRACE_DEBUG("Mean point(%f, %f) radians\n",
-                mean_point.lat,
-                mean_point.lon);
-    TRACE_DEBUG("Median point(%f, %f) radians\n",
-                median_point.lat,
+    TRACE_DEBUG("Mean point(%f, %f) radians\n", mean_point.lat, mean_point.lon);
+    TRACE_DEBUG("Median point(%f, %f) radians\n", median_point.lat,
                 median_point.lon);
 }

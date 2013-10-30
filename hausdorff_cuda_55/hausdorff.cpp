@@ -84,8 +84,8 @@ float hausdorff::distance_impl_test(const adj_path& p0, const adj_path& p1) {
 }
 
 void hausdorff::distance(const shared_ptr<gpu_device> gpu,
-                                const shared_ptr<adj_user_paths> paths,
-                                uint32_t j, uint32_t i) {
+                         const shared_ptr<adj_user_paths> paths, uint32_t j,
+                         uint32_t i) {
     const shared_ptr<adj_path> path0(paths->get_path(j));
     const shared_ptr<adj_path> path1(paths->get_path(i));
     float dist = distance_impl(gpu, *path0, *path1);
@@ -97,11 +97,12 @@ void hausdorff::distance(const shared_ptr<gpu_device> gpu,
     assert(abs (dist - dist_test) <= hausdorff::ERROR_LIMIT);
 #endif /* UNIT_TEST */
     TRACE_DEBUG("%d,%d,%s,%s,Distance: %f km\n", j, i,
-           path0->get_path_name().c_str(), path1->get_path_name().c_str(),
-           dist);
+                path0->get_path_name().c_str(), path1->get_path_name().c_str(),
+                dist);
 }
 
-float hausdorff::maxmin_impl(shared_ptr<float> results, uint32_t row, uint32_t col) {
+float hausdorff::maxmin_impl(shared_ptr<float> results, uint32_t row,
+                             uint32_t col) {
     float dist_01;
     float min_dist = FLT_MAX;
     float max_dist = 0.0;
@@ -144,10 +145,8 @@ float hausdorff::maxmin_impl(shared_ptr<float> results, uint32_t row, uint32_t c
     }
 }
 
-
 float hausdorff_cpu::distance_impl(const shared_ptr<gpu_device> gpu,
-                        const adj_path& p0,
-                        const adj_path& p1) {
+                                   const adj_path& p0, const adj_path& p1) {
     uint32_t points0 = p0.get_points_number();
     uint32_t points1 = p1.get_points_number();
     shared_ptr<float> results(new float[points0 * points1]);
@@ -156,8 +155,8 @@ float hausdorff_cpu::distance_impl(const shared_ptr<gpu_device> gpu,
 
     for (uint32_t i = 0; i < points0; i++) {
         for (uint32_t j = 0; j < points1; j++) {
-            results_ptr[i * points1 + j] = hausdorff::haversine(p0.get_point(i),
-                                                         p1.get_point(j));
+            results_ptr[i * points1 + j] = hausdorff::haversine(
+                    p0.get_point(i), p1.get_point(j));
         }
     }
 

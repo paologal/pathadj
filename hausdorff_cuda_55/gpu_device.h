@@ -26,47 +26,49 @@
 
 #include "platform_config.h"
 
-typedef enum gpu_memcpy_kind
-{
-    gpu_memcpy_host_to_host          =   0,      /**< Host   -> Host */
-    gpu_memcpy_host_to_device        =   1,      /**< Host   -> Device */
-    gpu_memcpy_device_to_host        =   2,      /**< Device -> Host */
-    gpu_memcpy_device_to_device      =   3,      /**< Device -> Device */
-    gpu_memcpy_default               =   4       /**< Default based unified virtual address space */
+typedef enum gpu_memcpy_kind {
+    gpu_memcpy_host_to_host = 0, /**< Host   -> Host */
+    gpu_memcpy_host_to_device = 1, /**< Host   -> Device */
+    gpu_memcpy_device_to_host = 2, /**< Device -> Host */
+    gpu_memcpy_device_to_device = 3, /**< Device -> Device */
+    gpu_memcpy_default = 4 /**< Default based unified virtual address space */
 } gpu_memcpy_kind_t;
 
-class gpu_device
-{
-public:
-    gpu_device(void) {};
-    virtual ~gpu_device(void) {};
+class gpu_device {
+ public:
+    gpu_device(void) {
+    }
 
-    virtual bool gpu_set_device(int32_t device) { 
-        return true; 
-    };
-    
+    virtual ~gpu_device(void) {
+    }
+
+    virtual bool gpu_set_device(int32_t device) {
+        return true;
+    }
+
     virtual void gpu_get_device_count(int32_t* device_count) {
-        *device_count = 1; 
-    };
-    
+        *device_count = 1;
+    }
+
     virtual void gpu_device_synchronize() {
     }
 
     virtual void gpu_device_reset() {
-    };
-    
+    }
+
     virtual bool gpu_device_free(void* device_data) {
-        return true; 
-    };
-    
-    virtual bool gpu_device_malloc(void** device_data, size_t size) { 
-        *device_data = nullptr; 
-        return true; 
-    };
-    
-    virtual bool gpu_memcpy(void* dst, const void* src, size_t count, gpu_memcpy_kind_t kind) {
-        return true; 
-    };
+        return true;
+    }
+
+    virtual bool gpu_device_malloc(void** device_data, size_t size) {
+        *device_data = nullptr;
+        return true;
+    }
+
+    virtual bool gpu_memcpy(void* dst, const void* src, size_t count,
+                            gpu_memcpy_kind_t kind) {
+        return true;
+    }
 };
 
 #endif /* GPU_DEVICE_H_ */

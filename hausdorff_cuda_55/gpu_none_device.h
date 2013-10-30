@@ -26,41 +26,41 @@
 
 #include "gpu_device.h"
 
-class gpu_none_device : public gpu_device
-{
-public:
+class gpu_none_device : public gpu_device {
+ public:
     gpu_none_device(void) {
-    };
+    }
 
     virtual ~gpu_none_device(void) {
-    };
+    }
 
-    virtual bool gpu_set_device(int32_t device) { 
-        return true; 
-    };
-    
+    virtual bool gpu_set_device(int32_t device) {
+        return true;
+    }
+
     virtual void gpu_get_device_count(int32_t* device_count) {
-        *device_count = 1; 
-    };
-    
+        *device_count = 1;
+    }
+
     virtual void gpu_device_synchronize() {
     }
 
     virtual void gpu_device_reset() {
-    };
-    
+    }
+
     virtual bool gpu_device_free(void* device_data) {
-        return true; 
-    };
-    
-    virtual bool gpu_device_malloc(void** device_data, size_t size) { 
-        *device_data = nullptr; 
-        return true; 
-    };
-    
-    virtual bool gpu_memcpy(void* dst, const void* src, size_t count, gpu_memcpy_kind_t kind) {
-        return true; 
-    };
+        return true;
+    }
+
+    virtual bool gpu_device_malloc(void** device_data, size_t size) {
+        *device_data = nullptr;
+        return true;
+    }
+
+    virtual bool gpu_memcpy(void* dst, const void* src, size_t count,
+                            gpu_memcpy_kind_t kind) {
+        return true;
+    }
 };
 
 #endif /* GPU_NONE_DEVICE_H_ */

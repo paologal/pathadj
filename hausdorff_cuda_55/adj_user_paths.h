@@ -30,7 +30,8 @@
 
 class adj_user_paths {
  public:
-    explicit adj_user_paths(const shared_ptr<gpu_device> gpu, const string& dir);
+    explicit adj_user_paths(const shared_ptr<gpu_device> gpu,
+                            const string& dir);
     virtual ~adj_user_paths();
 
     void load_path(const string& filename);

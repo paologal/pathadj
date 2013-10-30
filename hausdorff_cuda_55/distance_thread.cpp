@@ -27,8 +27,7 @@
 
 void distance_thread::compute_subset(const shared_ptr<gpu_device> gpu,
                                      const shared_ptr<adj_user_paths> paths,
-                                     uint32_t size,
-                                     uint32_t start,
+                                     uint32_t size, uint32_t start,
                                      uint32_t step) {
 
 #ifdef HAUSDORFF_CUDA
@@ -37,27 +36,22 @@ void distance_thread::compute_subset(const shared_ptr<gpu_device> gpu,
     const shared_ptr<hausdorff_cpu> algo(new hausdorff_cpu);
 #endif
     uint32_t count = 0;
-    
-    if (false == gpu->gpu_set_device(0))
-	{
-		TRACE_ERROR("GPU set device failed!");
-		return;
-	}
+
+    if (false == gpu->gpu_set_device(0)) {
+        TRACE_ERROR("GPU set device failed!");
+        return;
+    }
 
     for (uint32_t j = start; j < size / 2; j += step) {
-        TRACE_DEBUG("%d, Computing column %d, %d elements\n",
-                    start,
-                    j,
+        TRACE_DEBUG("%d, Computing column %d, %d elements\n", start, j,
                     size - (j + 1));
         for (uint32_t i = j + 1; i < size; ++i) {
             algo->distance(gpu, paths, j, i);
             ++count;
         }
         if (j != size - j - 2) {
-            TRACE_DEBUG("%d, Computing column %d, %d elements\n",
-                        start,
-                        size - j - 2,
-                        size - (size - j - 1));
+            TRACE_DEBUG("%d, Computing column %d, %d elements\n", start,
+                        size - j - 2, size - (size - j - 1));
             for (uint32_t i = size - j - 1; i < size; ++i) {
                 algo->distance(gpu, paths, size - j - 2, i);
                 ++count;

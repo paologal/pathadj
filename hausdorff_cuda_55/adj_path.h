@@ -50,7 +50,9 @@ class adj_path {
     void reset();
     void init();
 
-    inline path_point_t* get_device_data() const { return device_data; };
+    inline path_point_t* get_device_data() const {
+        return device_data;
+    }
 
     inline const string& get_path_name() const {
         return file_name;

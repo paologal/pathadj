@@ -44,7 +44,6 @@ using std::shared_ptr;
 using std::thread;
 using std::numeric_limits;
 
-
 #ifndef PLATFORM_CONFIG_H_
 #define PLATFORM_CONFIG_H_
 
