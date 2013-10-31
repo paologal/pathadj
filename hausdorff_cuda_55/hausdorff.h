@@ -44,7 +44,7 @@ class hausdorff {
     float haversine(const path_point_t* p0, const path_point_t* p1);
 
  protected:
-    float maxmin_impl(shared_ptr<float> results, uint32_t row, uint32_t col);
+    float maxmin_impl(const float* results, uint32_t row, uint32_t col);
     virtual float distance_impl(const shared_ptr<gpu_device> gpu,
                                 const adj_path& p0, const adj_path& p1) = 0;
 

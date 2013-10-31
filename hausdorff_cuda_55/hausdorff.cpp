@@ -101,18 +101,17 @@ void hausdorff::distance(const shared_ptr<gpu_device> gpu,
                 dist);
 }
 
-float hausdorff::maxmin_impl(shared_ptr<float> results, uint32_t row,
+float hausdorff::maxmin_impl(const float* results, uint32_t row,
                              uint32_t col) {
     float dist_01;
     float min_dist = FLT_MAX;
     float max_dist = 0.0;
     float curr_dist = 0.0;
-    float* results_ptr = results.get();
 
     for (uint32_t i = 0; i < row; i++) {
         min_dist = FLT_MAX;
         for (uint32_t j = 0; j < col; j++) {
-            curr_dist = results_ptr[i * col + j];
+            curr_dist = results[i * col + j];
             if (curr_dist < min_dist) {
                 min_dist = curr_dist;
             }
@@ -128,7 +127,7 @@ float hausdorff::maxmin_impl(shared_ptr<float> results, uint32_t row,
     for (uint32_t i = 0; i < col; i++) {
         min_dist = FLT_MAX;
         for (uint32_t j = 0; j < row; j++) {
-            curr_dist = results_ptr[i + j * col];
+            curr_dist = results[i + j * col];
             if (curr_dist < min_dist) {
                 min_dist = curr_dist;
             }
@@ -149,18 +148,19 @@ float hausdorff_cpu::distance_impl(const shared_ptr<gpu_device> gpu,
                                    const adj_path& p0, const adj_path& p1) {
     uint32_t points0 = p0.get_points_number();
     uint32_t points1 = p1.get_points_number();
-    shared_ptr<float> results(new float[points0 * points1]);
-    float* results_ptr = results.get();
+    float* results(new float[points0 * points1]);
     float dist = 0.0f;
 
     for (uint32_t i = 0; i < points0; i++) {
         for (uint32_t j = 0; j < points1; j++) {
-            results_ptr[i * points1 + j] = hausdorff::haversine(
+            results[i * points1 + j] = hausdorff::haversine(
                     p0.get_point(i), p1.get_point(j));
         }
     }
 
     dist = maxmin_impl(results, points0, points1);
+
+    delete [] results;
 
     return dist;
 }
