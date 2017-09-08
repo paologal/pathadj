@@ -1,0 +1,4 @@
+mysql -u root -p
+
+mysql -u paolo -pCipolla12
+

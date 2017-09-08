@@ -77,9 +77,10 @@ using std::numeric_limits;
 
 #define TRACE_INFO printf
 #define TRACE_ERROR printf
-#ifdef DEBUG_DUMP
 #define TRACE_DEBUG printf
+#ifdef DEBUG_DUMP
+#define TRACE_VERBOSE printf
 #else
-#define TRACE_DEBUG
+#define TRACE_VERBOSE
 #endif
 #endif  /* PLATFORM_CONFIG_H_ */

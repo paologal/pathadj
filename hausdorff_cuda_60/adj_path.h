@@ -50,10 +50,6 @@ class adj_path {
     void reset();
     void init();
 
-    inline path_point_t* get_device_data() const {
-        return device_data;
-    }
-
     inline const string& get_path_name() const {
         return file_name;
     }
@@ -74,7 +70,6 @@ class adj_path {
     const shared_ptr<gpu_device> gpu;
     static const uint32_t PATH_FILE_CHECKSUM = 0x00ED00ED;
     uint8_t* path_data;
-    path_point_t* device_data;
     path_file_t path;
     string file_name;
 

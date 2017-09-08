@@ -29,7 +29,6 @@
 adj_path::adj_path(const shared_ptr<gpu_device> gpu, const string& file)
         : gpu(gpu),
           path_data(nullptr),
-          device_data(nullptr),
           file_name(file),
           cumulated_distance(0.0) {
     memset(&mean_point, 0, sizeof(mean_point));
@@ -47,11 +46,6 @@ void adj_path::reset() {
     if (nullptr != path_data) {
         delete[] path_data;
         path_data = nullptr;
-    }
-
-    if (nullptr != device_data) {
-        gpu->gpu_device_free(device_data);
-        device_data = nullptr;
     }
 
     memset(&path, 0, sizeof(path));
@@ -153,22 +147,6 @@ bool adj_path::load_file() {
         return false;
     }
 
-    /* Allocate GPU buffer */
-    if (false
-            == gpu->gpu_device_malloc((void**) &device_data,
-                                      path.points * (sizeof(path_point_t)))) {
-        reset();
-        return false;
-    }
-    // Copy path from host memory to GPU buffer.
-    if (false
-            == gpu->gpu_memcpy(device_data, path.coordinates,
-                               path.points * (sizeof(path_point_t)),
-                               gpu_memcpy_host_to_device)) {
-        reset();
-        return false;
-    }
-
     dump();
     init();
 
@@ -176,13 +154,11 @@ bool adj_path::load_file() {
 }
 
 void adj_path::dump() {
-#ifdef DEBUG_DUMP
-    TRACE_DEBUG("Filename: %s\n", file_name.c_str());
+	TRACE_VERBOSE("Filename: %s\n", file_name.c_str());
     for (uint32_t i = 0; i < path.points; ++i) {
-        TRACE_DEBUG("Point %d. Latitude %f, Longitude %f\n", i,
+    	TRACE_VERBOSE("Point %d. Latitude %f, Longitude %f\n", i,
                     path.coordinates[i].lat, path.coordinates[i].lon);
     }
-#endif /* DEBUG_DUMP */
 }
 
 void adj_path::init() {
